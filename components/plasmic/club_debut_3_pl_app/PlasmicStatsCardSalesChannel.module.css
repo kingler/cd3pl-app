@@ -1,0 +1,424 @@
+.root {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(160, 171, 183, 0.256);
+  width: 449px;
+  height: 254px;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+}
+.uiOrderStatsCardTitles3 {
+  display: block;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 22px;
+  left: 5.34%;
+  width: 35.9%;
+  transform: translate(-0.1980000000000004px, 0px);
+}
+.frame79 {
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 18px;
+  left: 332px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.frame79 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 7px);
+  width: calc(100% + 7px);
+}
+.frame79 > :global(.__wab_flex-container) > *,
+.frame79 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame79 > :global(.__wab_flex-container) > picture > img,
+.frame79
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 7px;
+}
+.all5 {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 21px;
+  color: rgba(0, 143, 146, 1);
+  position: relative;
+}
+.svg {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #009093;
+  width: 14px;
+  height: 14px;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 900px;
+}
+.img {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  width: 109px;
+  height: 110px;
+  display: block !important;
+  top: 35px;
+  left: 212px;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img > .__wab_img-spacer > img {
+  object-fit: cover;
+}
+.uiOrderStatsCount3 {
+  display: block;
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 40px;
+  color: rgba(34, 48, 63, 1);
+  position: absolute;
+  top: 90px;
+  left: 6.9%;
+}
+.frame80 {
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 172px;
+  left: 24px;
+}
+.frame80 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: calc(0px - 30px);
+  width: calc(100% + 30px);
+}
+.frame80 > :global(.__wab_flex-container) > *,
+.frame80 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame80 > :global(.__wab_flex-container) > picture > img,
+.frame80
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 30px;
+}
+.ordersByEventsChannels {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uiOrdersByChannelCountLabel1 {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  color: rgba(195, 161, 9, 1);
+  position: relative;
+}
+.ordersLabel {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(104, 121, 140, 1);
+  position: relative;
+}
+.uiOrdersStatsChannelLabel1 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(11, 22, 33, 1);
+  position: relative;
+}
+.ordersByWholesaleChannels {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uiOrdersByChannelCountLabel2 {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  color: rgba(0, 143, 146, 1);
+  position: relative;
+}
+.ordersLabel2 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(104, 121, 140, 1);
+  position: relative;
+}
+.uiOrdersStatsChannelLabel2 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(11, 22, 33, 1);
+  position: relative;
+}
+.ordersByWholesaleChannels2 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uiOrdersByChannelCountLabel22 {
+  background: none;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  color: var(--token-qjU-qfmo9);
+  position: relative;
+}
+.ordersLabel3 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(104, 121, 140, 1);
+  position: relative;
+}
+.uiOrdersStatsChannelLabel3 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(11, 22, 33, 1);
+  position: relative;
+}
+.ordersByWholesaleChannels3 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uiOrdersByChannelCountLabel4 {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  color: rgba(246, 68, 8, 1);
+  position: relative;
+}
+.ordersLabel4 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(104, 121, 140, 1);
+  position: relative;
+}
+.uiOrdersStatsChannelLabel4 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(11, 22, 33, 1);
+  position: relative;
+}
+.ordersByWholesaleChannels4 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uiOrdersByChannelCountLabel5 {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+  color: rgba(96, 121, 132, 1);
+  position: relative;
+}
+.ordersLabel5 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: rgba(104, 121, 140, 1);
+  position: relative;
+}
+.uiOrdersStatsChannelLabel5 {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(11, 22, 33, 1);
+  position: relative;
+}
+.nBchartsColumnChats2 {
+  opacity: 0.779;
+  width: 158px;
+  height: 86px;
+  display: block;
+  position: absolute;
+  top: 59px;
+  left: 204px;
+}
+.columns12 {
+  flex-direction: row;
+  transform: translate(0.49600000000000044px, 0px);
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: -8.87%;
+}
+.columns12 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.columns12 > :global(.__wab_flex-container) > *,
+.columns12 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.columns12 > :global(.__wab_flex-container) > picture > img,
+.columns12
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+._112 {
+  background: rgba(195, 161, 9, 1);
+  width: 30px;
+  height: 35px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+._142 {
+  background: rgba(0, 143, 146, 1);
+  width: 30px;
+  height: 86px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+._132 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 128, 245, 1) 0%,
+      rgba(11, 112, 226, 1) 100%
+    )
+    0% 0% / 100% 100% no-repeat;
+  width: 30px;
+  height: 59px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+._122 {
+  background: rgba(246, 68, 8, 1);
+  width: 30px;
+  height: 49px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+._123 {
+  background: rgba(96, 121, 132, 1);
+  width: 29px;
+  height: 23px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 2px;
+}

@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  position: relative;
+}
+.svg__vb2Z {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-IANicBa3U);
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}

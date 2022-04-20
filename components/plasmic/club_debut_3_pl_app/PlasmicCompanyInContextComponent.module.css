@@ -1,0 +1,108 @@
+.accountInContext {
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+.accountInContext > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: calc(0px - 0px);
+  height: calc(100% + 0px);
+}
+.accountInContext > :global(.__wab_flex-container) > *,
+.accountInContext > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.accountInContext > :global(.__wab_flex-container) > picture > img,
+.accountInContext
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 0px;
+}
+.accountInContextisExpandedViewMenu {
+  max-width: 228px;
+  width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.accountInContextisExpandedViewMenu > :global(.__wab_flex-container) {
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+}
+.accountInContextisCollapsedHideMenu {
+  width: auto;
+  max-width: 208px;
+  display: inline-flex;
+}
+.freeBox {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 4px);
+  width: calc(100% + 4px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 4px;
+}
+.freeBoxisCollapsedHideMenu {
+  width: auto;
+}
+.freeBoxisCollapsedViewMenu {
+  width: auto;
+}
+.select:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text {
+  color: var(--token-9MeSHHGgb);
+}
+.option__pVeJl:global(.__wab_instance) {
+  position: relative;
+  width: 100%;
+  margin-left: 8px;
+  margin-top: 8px;
+  min-width: 0;
+}
+.text___1LIrP {
+  color: #535353;
+}
+.option__tre7F:global(.__wab_instance) {
+  position: relative;
+  margin-left: 8px;
+}
+.option__tjl7S:global(.__wab_instance) {
+  position: relative;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.svg__qEdHq {
+  position: relative;
+  object-fit: cover;
+  width: 12px;
+  height: 12px;
+  color: var(--token-U_VIuvWks);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}

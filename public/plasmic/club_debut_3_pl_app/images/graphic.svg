@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 822 1386">
+  <g opacity=".512" filter="url(#eBge53RWEa)">
+    <path d="M135.999 418c0-155.744 111.788-282 249.685-282 137.898 0 249.686 126.256 249.686 282S523.582 700 385.684 700c-137.897 0-249.685-126.256-249.685-282z" fill="url(#eBge53RWEb)"/>
+  </g>
+  <g opacity=".512" filter="url(#eBge53RWEc)">
+    <path d="M194.256 1018.65c45.535 148.94 189.352 236.99 321.224 196.68 131.872-40.32 201.862-193.74 156.326-342.682-45.535-148.939-189.352-236.994-321.224-196.677-131.872 40.318-201.861 193.74-156.326 342.679z" fill="url(#eBge53RWEd)"/>
+  </g>
+  <defs>
+    <linearGradient id="eBge53RWEb" x1="685.579" y1="1008.29" x2="808.62" y2="220.509" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DC530A"/>
+      <stop offset="1" stop-color="#E9ECEF"/>
+    </linearGradient>
+    <linearGradient id="eBge53RWEd" x1="547.238" y1="293.472" x2="895.228" y2="1010.86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#009093"/>
+      <stop offset="1" stop-color="#E9ECEF"/>
+    </linearGradient>
+    <filter id="eBge53RWEa" x=".085" y=".086" width="771.199" height="835.828" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="67.957" result="effect1_foregroundBlur_123_60653"/>
+    </filter>
+    <filter id="eBge53RWEc" x="44.439" y="530.282" width="777.184" height="830.735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="67.957" result="effect1_foregroundBlur_123_60653"/>
+    </filter>
+  </defs>
+</svg>

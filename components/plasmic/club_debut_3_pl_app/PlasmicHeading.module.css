@@ -1,0 +1,22 @@
+.root {
+  display: block;
+  font-size: 44px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1.601px;
+  line-height: 100%;
+  color: rgba(48, 48, 48, 1);
+  width: 100%;
+  position: relative;
+  text-align: center;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    font-size: 29px;
+    line-height: 33px;
+  }
+}
+.rootisSignUpFlow {
+  height: auto;
+}

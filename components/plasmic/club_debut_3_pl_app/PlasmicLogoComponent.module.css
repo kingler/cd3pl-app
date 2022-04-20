@@ -1,0 +1,25 @@
+.root {
+  object-fit: cover;
+  max-width: 100%;
+  height: 80px;
+  width: 175px;
+  color: var(--token-MNeOwACQv);
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    color: var(--token-O5NCBlXkQ);
+  }
+}
+.rootcolor_dark {
+  color: #0b16212b;
+}
+.rootcolor_light {
+  color: var(--token-O5NCBlXkQ);
+}
+.rootcolor_teal {
+  color: var(--token-MVJqjvLUa);
+}
+.rootcolor_orange {
+  color: var(--token-1SQz8aj_J);
+}

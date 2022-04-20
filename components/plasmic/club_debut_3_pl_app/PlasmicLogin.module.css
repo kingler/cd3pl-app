@@ -1,0 +1,260 @@
+.loginPage {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+.login {
+  flex-direction: row;
+  background: url("/plasmic/club_debut_3_pl_app/images/loginBackgroundpng.png") top 50% left 50% / cover repeat,
+    rgba(235, 237, 240, 1);
+  width: 100%;
+  height: 1022px;
+  display: flex;
+  overflow: hidden;
+  min-width: 0;
+}
+.login > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 79px);
+  width: calc(100% + 79px);
+}
+.login > :global(.__wab_flex-container) > *,
+.login > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.login > :global(.__wab_flex-container) > picture > img,
+.login > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 79px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .login {
+    width: 414px;
+    background: url("/plasmic/club_debut_3_pl_app/images/loginBackgroundpng.png") top 49% left 61% / cover repeat,
+      rgba(235, 237, 240, 1);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .login > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .login > :global(.__wab_flex-container) > *,
+  .login > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .login > :global(.__wab_flex-container) > picture > img,
+  .login
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+  }
+}
+.signIn {
+  flex-direction: column;
+  width: 403px;
+  height: auto;
+  display: flex;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-top: 110px;
+  margin-right: 110px;
+  margin-bottom: 110px;
+  margin-left: calc(110px + 79px) !important;
+  flex-shrink: 0;
+}
+.signIn > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: calc(0px - 38px);
+  height: calc(100% + 38px);
+}
+.signIn > :global(.__wab_flex-container) > *,
+.signIn > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.signIn > :global(.__wab_flex-container) > picture > img,
+.signIn
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 38px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .signIn {
+    width: auto;
+    margin-right: 0px;
+    margin-left: calc(0px + 0px) !important;
+    left: auto;
+    top: auto;
+    margin-top: 5px;
+    margin-bottom: 52px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .signIn > :global(.__wab_flex-container) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.authComponent:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .authComponent:global(.__wab_instance) {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: calc(88px + 38px) !important;
+  }
+}
+.horizontalStack {
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 1000;
+  min-width: 0;
+}
+.horizontalStack > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 0;
+  margin-left: calc(0px - 167px);
+  width: calc(100% + 167px);
+}
+.horizontalStack > :global(.__wab_flex-container) > *,
+.horizontalStack > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.horizontalStack > :global(.__wab_flex-container) > picture > img,
+.horizontalStack
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 167px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .horizontalStack {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    left: auto;
+    top: auto;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .horizontalStack > :global(.__wab_flex-container) {
+    flex-direction: column;
+    min-width: 0;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .horizontalStack > :global(.__wab_flex-container) > *,
+  .horizontalStack > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .horizontalStack > :global(.__wab_flex-container) > picture > img,
+  .horizontalStack
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+  }
+}
+.logo {
+  background: none;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .logo {
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    position: sticky;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    flex-column-gap: 0px;
+  }
+}
+.logoComponent:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .logoComponent:global(.__wab_instance) {
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-shrink: 0;
+  }
+}
+.text {
+  position: relative;
+  width: 496px;
+  height: auto;
+  max-width: 800px;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  left: auto;
+  top: auto;
+  padding-left: 52px;
+  flex-shrink: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text {
+    font-size: 24px;
+    text-align: center;
+    left: auto;
+    top: auto;
+    z-index: 1;
+    position: relative;
+    width: auto;
+    margin-right: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+}

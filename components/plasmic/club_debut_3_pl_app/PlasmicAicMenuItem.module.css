@@ -1,0 +1,99 @@
+.switchAccount {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+}
+.freeBox {
+  transform: translate(0.017999999999999794px, 0px);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  height: 35px;
+  background: var(--token-O5NCBlXkQ);
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  min-width: 0;
+  border-radius: 5px;
+}
+.freeBoxaddNew {
+  background: var(--token-MVJqjvLUa);
+}
+.switchAccount:hover .freeBox {
+  background: var(--token-KzKcV5tMk);
+}
+.businessIcon {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-MNeOwACQv);
+  width: 19px;
+  height: 18px;
+  display: block;
+  top: auto;
+  left: auto;
+  transform: translate(-0.04299999999999926px, -0.5px);
+  flex-shrink: 0;
+}
+.businessIconselected {
+  color: var(--token-MVJqjvLUa);
+}
+.businessIconaddNew {
+  width: 24px;
+  height: 24px;
+  color: var(--token-JheQsOY_N);
+  flex-shrink: 0;
+}
+.switchAccount:hover .businessIcon {
+  color: var(--token-MVJqjvLUa);
+}
+.svg {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-MNeOwACQv);
+  width: 19px;
+  height: 18px;
+  top: auto;
+  left: auto;
+  transform: translate(-0.04299999999999926px, -0.5px);
+  flex-shrink: 0;
+  display: none;
+}
+.svgselected {
+  color: var(--token-MVJqjvLUa);
+  left: auto;
+  top: auto;
+  display: block;
+}
+.textString {
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  transform: translate(0.18999999999999773px, -0.5px);
+  padding-left: 10px;
+  flex-direction: row;
+}
+.slotTargetChildren {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--token-IANicBa3U);
+  text-align: left;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.slotTargetChildrenselected {
+  color: var(--token-MVJqjvLUa);
+}
+.slotTargetChildrenaddNew {
+  color: var(--token-JheQsOY_N);
+  text-align: left;
+}
+.switchAccount:hover .slotTargetChildren {
+  color: var(--token-MVJqjvLUa);
+}

@@ -1,0 +1,119 @@
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--token-utV2n2k1f);
+  min-width: 0;
+  min-height: 0;
+}
+.mainContainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+}
+.sidePanelComponent:global(.__wab_instance) {
+  max-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  min-height: 0;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+}
+.topBar:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.dashboardIcon {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #000;
+  width: 40px;
+  height: 38.4px;
+  display: block;
+}
+.importButton:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: none;
+}
+.svg__q6BV {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  color: var(--token-LJZ1V6cwa);
+}
+.text__cTm7N {
+  color: var(--token-LJZ1V6cwa);
+}
+.svg__thwyN {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.exportButton:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: none;
+}
+.svg__zFkF6 {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  color: var(--token-LJZ1V6cwa);
+}
+.text___8Yj7D {
+  color: var(--token-LJZ1V6cwa);
+}
+.svg___09GoW {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.addOrderButton:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  height: 40px;
+  display: none;
+}
+.svg___3Xb0R {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__yr1Cu {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
