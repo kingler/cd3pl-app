@@ -34,6 +34,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import SidePanel from "../../SidePanel"; // plasmic-import: 6cCQxsGyn8Z/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -51,7 +52,9 @@ type ArgPropType = keyof PlasmicCustomers__ArgsType;
 export const PlasmicCustomers__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicCustomers__OverridesType = {
-  root?: p.Flex<"div">;
+  customersPage?: p.Flex<"div">;
+  sidePanel?: p.Flex<typeof SidePanel>;
+  freeBox?: p.Flex<"div">;
 };
 
 export interface DefaultCustomersProps {}
@@ -78,8 +81,8 @@ function PlasmicCustomers__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"customersPage"}
+          data-plasmic-override={overrides.customersPage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -88,22 +91,40 @@ function PlasmicCustomers__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
-            sty.root
+            sty.customersPage
           )}
-        />
+        >
+          <SidePanel
+            data-plasmic-name={"sidePanel"}
+            data-plasmic-override={overrides.sidePanel}
+            className={classNames("__wab_instance", sty.sidePanel)}
+          />
+
+          {true ? (
+            <div
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
+            />
+          ) : null}
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  customersPage: ["customersPage", "sidePanel", "freeBox"],
+  sidePanel: ["sidePanel"],
+  freeBox: ["freeBox"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  customersPage: "div";
+  sidePanel: typeof SidePanel;
+  freeBox: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -150,7 +171,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "customersPage") {
     func.displayName = "PlasmicCustomers";
   } else {
     func.displayName = `PlasmicCustomers.${nodeName}`;
@@ -160,9 +181,11 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicCustomers = Object.assign(
   // Top-level PlasmicCustomers renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("customersPage"),
   {
     // Helper components rendering sub-elements
+    sidePanel: makeNodeComponent("sidePanel"),
+    freeBox: makeNodeComponent("freeBox"),
 
     // Metadata about props expected for PlasmicCustomers
     internalVariantProps: PlasmicCustomers__VariantProps,

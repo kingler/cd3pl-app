@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import {
-  PlasmicAuthComponent,
-  DefaultAuthComponentProps
-} from "./plasmic/club_debut_3_pl_app/PlasmicAuthComponent";
+  PlasmicStatWidgetControls,
+  DefaultStatWidgetControlsProps
+} from "./plasmic/club_debut_3_pl_app/PlasmicStatWidgetControls";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -14,35 +14,36 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // If you don't want to expose certain variants or slots as a prop, you can use
 // Omit to hide them:
 //
-// interface AuthComponentProps extends Omit<DefaultAuthComponentProps, "hideProps1"|"hideProp2"> {
+// interface StatWidgetControlsProps extends Omit<DefaultStatWidgetControlsProps, "hideProps1"|"hideProp2"> {
 //   // etc.
 // }
 //
-// You can also stop extending from DefaultAuthComponentProps altogether and have
+// You can also stop extending from DefaultStatWidgetControlsProps altogether and have
 // total control over the props for your component.
-export interface AuthComponentProps extends DefaultAuthComponentProps {}
+export interface StatWidgetControlsProps
+  extends DefaultStatWidgetControlsProps {}
 
-function AuthComponent_(
-  props: AuthComponentProps,
+function StatWidgetControls_(
+  props: StatWidgetControlsProps,
   ref: HTMLElementRefOf<"div">
 ) {
-  // Use PlasmicAuthComponent to render this component as it was
+  // Use PlasmicStatWidgetControls to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicAuthComponent are:
+  // Props you can pass into PlasmicStatWidgetControls are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, we are just piping all AuthComponentProps here, but feel free
+  // By default, we are just piping all StatWidgetControlsProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicAuthComponent accountRegistration={{ ref }} {...props} />;
+  return <PlasmicStatWidgetControls controls={{ ref }} {...props} />;
 }
 
-const AuthComponent = React.forwardRef(AuthComponent_);
-export default AuthComponent;
+const StatWidgetControls = React.forwardRef(StatWidgetControls_);
+export default StatWidgetControls;

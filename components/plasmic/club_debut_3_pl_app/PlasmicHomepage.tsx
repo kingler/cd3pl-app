@@ -36,9 +36,10 @@ import {
 } from "@plasmicapp/react-web";
 import TopBar from "../../TopBar"; // plasmic-import: CBtIl4cHm9/component
 import Button from "../../Button"; // plasmic-import: iZavS5akl9G/component
-import StatsCard from "../../StatsCard"; // plasmic-import: V8KmQ7KGSy/component
-import StatsCard2 from "../../StatsCard2"; // plasmic-import: YFRpRP19Qn1/component
-import StatsCardSalesChannel from "../../StatsCardSalesChannel"; // plasmic-import: 5U-Zs7sqEeG/component
+import StatsCardBasic from "../../StatsCardBasic"; // plasmic-import: V8KmQ7KGSy/component
+import StatsCardDate from "../../StatsCardDate"; // plasmic-import: YFRpRP19Qn1/component
+import StatsCardMultiple from "../../StatsCardMultiple"; // plasmic-import: 5U-Zs7sqEeG/component
+import StatWidget3 from "../../StatWidget3"; // plasmic-import: AIDP5SC9DqO/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -50,13 +51,10 @@ import IconimportIconIcon from "./icons/PlasmicIcon__IconimportIcon"; // plasmic
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: zGfmmTFBuGj/icon
 import IcondownIconIcon from "./icons/PlasmicIcon__IcondownIcon"; // plasmic-import: 0-rTnaDj68/icon
 import AppIcons5Icon from "./icons/PlasmicIcon__AppIcons5"; // plasmic-import: 7I9cVdZlI5O/icon
-import Ellipse9Icon from "./icons/PlasmicIcon__Ellipse9"; // plasmic-import: KihUhiXqTKx/icon
+import Intakesvg3Icon from "./icons/PlasmicIcon__Intakesvg3"; // plasmic-import: JATz_rnVL/icon
 import FulfillmentIconsIcon from "./icons/PlasmicIcon__FulfillmentIcons"; // plasmic-import: xCxuE92vDyw/icon
-import Ellipse10Icon from "./icons/PlasmicIcon__Ellipse10"; // plasmic-import: ZH_n8HgSwZQ/icon
 import GroupIcon from "./icons/PlasmicIcon__Group"; // plasmic-import: SgAzxeatqRv/icon
-import Ellipse11Icon from "./icons/PlasmicIcon__Ellipse11"; // plasmic-import: crhr8MbGSC1/icon
 import FulfillmentIcons2Icon from "./icons/PlasmicIcon__FulfillmentIcons2"; // plasmic-import: seUp9jdHXGK/icon
-import ArrowRightIcon from "./icons/PlasmicIcon__ArrowRight"; // plasmic-import: MwLzW1BmIz/icon
 import CircleBorderIconIcon from "./icons/PlasmicIcon__CircleBorderIcon"; // plasmic-import: AjrLt0DvKC/icon
 import StatusIconsIcon from "./icons/PlasmicIcon__StatusIcons"; // plasmic-import: jIDykVXduK/icon
 import ShowHideIcon from "./icons/PlasmicIcon__ShowHide"; // plasmic-import: xN6ZjnSlmk9/icon
@@ -89,38 +87,10 @@ export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   topBar?: p.Flex<typeof TopBar>;
   invetoryStatistic?: p.Flex<"div">;
-  orderStatsCard?: p.Flex<typeof StatsCard>;
-  ordersByDayStatsCard?: p.Flex<typeof StatsCard2>;
-  statsCardSalesChannel?: p.Flex<typeof StatsCardSalesChannel>;
-  dataFilterCta14?: p.Flex<"div">;
-  all6?: p.Flex<"div">;
-  uiOrderStatsCount4?: p.Flex<"div">;
-  frame81?: p.Flex<"div">;
-  frame74?: p.Flex<"div">;
-  group34?: p.Flex<"div">;
-  ordersByInProcessValue1?: p.Flex<"div">;
-  uiOrdersByInProcessLabel1?: p.Flex<"div">;
-  img?: p.Flex<typeof p.PlasmicImg>;
-  frame75?: p.Flex<"div">;
-  frame82?: p.Flex<"div">;
-  group35?: p.Flex<"div">;
-  ordersByInProcessValue2?: p.Flex<"div">;
-  uiOrdersByInProcessLabel2?: p.Flex<"div">;
-  group43?: p.Flex<"div">;
-  frame76?: p.Flex<"div">;
-  frame83?: p.Flex<"div">;
-  group36?: p.Flex<"div">;
-  ordersByInProcessValue3?: p.Flex<"div">;
-  uiOrdersByInProcessLabel3?: p.Flex<"div">;
-  group42?: p.Flex<"div">;
-  frame77?: p.Flex<"div">;
-  frame84?: p.Flex<"div">;
-  group37?: p.Flex<"div">;
-  ordersByInProcessValue4?: p.Flex<"div">;
-  uiOrdersByInProcessLabel4?: p.Flex<"div">;
-  group44?: p.Flex<"div">;
-  frame85?: p.Flex<"div">;
-  all7?: p.Flex<"div">;
+  orderStatsCard?: p.Flex<typeof StatsCardBasic>;
+  ordersByDayStatsCard?: p.Flex<typeof StatsCardDate>;
+  statsCardMultiple?: p.Flex<typeof StatsCardMultiple>;
+  statWidget3?: p.Flex<typeof StatWidget3>;
   dataFilterCta18?: p.Flex<"div">;
   all8?: p.Flex<"div">;
   dataTable?: p.Flex<"div">;
@@ -663,13 +633,13 @@ function PlasmicHomepage__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.invetoryStatistic)}
               >
-                <StatsCard
+                <StatsCardBasic
                   data-plasmic-name={"orderStatsCard"}
                   data-plasmic-override={overrides.orderStatsCard}
                   className={classNames("__wab_instance", sty.orderStatsCard)}
                 />
 
-                <StatsCard2
+                <StatsCardDate
                   data-plasmic-name={"ordersByDayStatsCard"}
                   data-plasmic-override={overrides.ordersByDayStatsCard}
                   className={classNames(
@@ -678,329 +648,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 />
 
-                <StatsCardSalesChannel
-                  data-plasmic-name={"statsCardSalesChannel"}
-                  data-plasmic-override={overrides.statsCardSalesChannel}
+                <StatsCardMultiple
+                  data-plasmic-name={"statsCardMultiple"}
+                  data-plasmic-override={overrides.statsCardMultiple}
                   className={classNames(
                     "__wab_instance",
-                    sty.statsCardSalesChannel
+                    sty.statsCardMultiple
                   )}
                 />
 
-                <div
-                  data-plasmic-name={"dataFilterCta14"}
-                  data-plasmic-override={overrides.dataFilterCta14}
-                  className={classNames(projectcss.all, sty.dataFilterCta14)}
-                >
-                  <div
-                    data-plasmic-name={"all6"}
-                    data-plasmic-override={overrides.all6}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.all6
-                    )}
-                  >
-                    {" "}
-                  </div>
-
-                  <div
-                    data-plasmic-name={"uiOrderStatsCount4"}
-                    data-plasmic-override={overrides.uiOrderStatsCount4}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.uiOrderStatsCount4
-                    )}
-                  >
-                    {"621"}
-                  </div>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame81"}
-                    data-plasmic-override={overrides.frame81}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame81)}
-                  >
-                    <div
-                      data-plasmic-name={"frame74"}
-                      data-plasmic-override={overrides.frame74}
-                      className={classNames(projectcss.all, sty.frame74)}
-                    >
-                      <div
-                        data-plasmic-name={"group34"}
-                        data-plasmic-override={overrides.group34}
-                        className={classNames(projectcss.all, sty.group34)}
-                      >
-                        <div
-                          data-plasmic-name={"ordersByInProcessValue1"}
-                          data-plasmic-override={
-                            overrides.ordersByInProcessValue1
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.ordersByInProcessValue1
-                          )}
-                        >
-                          {"157"}
-                        </div>
-                      </div>
-
-                      <div
-                        data-plasmic-name={"uiOrdersByInProcessLabel1"}
-                        data-plasmic-override={
-                          overrides.uiOrdersByInProcessLabel1
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.uiOrdersByInProcessLabel1
-                        )}
-                      >
-                        {"In Tack"}
-                      </div>
-                    </div>
-
-                    <p.PlasmicImg
-                      data-plasmic-name={"img"}
-                      data-plasmic-override={overrides.img}
-                      alt={""}
-                      className={classNames(sty.img)}
-                      displayHeight={"59px" as const}
-                      displayMaxHeight={"none" as const}
-                      displayMaxWidth={"100%" as const}
-                      displayMinHeight={"0" as const}
-                      displayMinWidth={"0" as const}
-                      displayWidth={"59px" as const}
-                      loading={"lazy" as const}
-                      src={{
-                        src: "/plasmic/club_debut_3_pl_app/images/group41.svg",
-                        fullWidth: 59,
-                        fullHeight: 59,
-                        aspectRatio: 1
-                      }}
-                    />
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame75"}
-                    data-plasmic-override={overrides.frame75}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame75)}
-                  >
-                    <div
-                      data-plasmic-name={"frame82"}
-                      data-plasmic-override={overrides.frame82}
-                      className={classNames(projectcss.all, sty.frame82)}
-                    >
-                      <div
-                        data-plasmic-name={"group35"}
-                        data-plasmic-override={overrides.group35}
-                        className={classNames(projectcss.all, sty.group35)}
-                      >
-                        <div
-                          data-plasmic-name={"ordersByInProcessValue2"}
-                          data-plasmic-override={
-                            overrides.ordersByInProcessValue2
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.ordersByInProcessValue2
-                          )}
-                        >
-                          {"239"}
-                        </div>
-                      </div>
-
-                      <div
-                        data-plasmic-name={"uiOrdersByInProcessLabel2"}
-                        data-plasmic-override={
-                          overrides.uiOrdersByInProcessLabel2
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.uiOrdersByInProcessLabel2
-                        )}
-                      >
-                        {"Pick & Pack"}
-                      </div>
-                    </div>
-
-                    <div
-                      data-plasmic-name={"group43"}
-                      data-plasmic-override={overrides.group43}
-                      className={classNames(projectcss.all, sty.group43)}
-                    >
-                      <Ellipse9Icon
-                        className={classNames(projectcss.all, sty.svg___69Kzf)}
-                        role={"img"}
-                      />
-
-                      <FulfillmentIconsIcon
-                        className={classNames(projectcss.all, sty.svg__nWrT)}
-                        role={"img"}
-                      />
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame76"}
-                    data-plasmic-override={overrides.frame76}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame76)}
-                  >
-                    <div
-                      data-plasmic-name={"frame83"}
-                      data-plasmic-override={overrides.frame83}
-                      className={classNames(projectcss.all, sty.frame83)}
-                    >
-                      <div
-                        data-plasmic-name={"group36"}
-                        data-plasmic-override={overrides.group36}
-                        className={classNames(projectcss.all, sty.group36)}
-                      >
-                        <div
-                          data-plasmic-name={"ordersByInProcessValue3"}
-                          data-plasmic-override={
-                            overrides.ordersByInProcessValue3
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.ordersByInProcessValue3
-                          )}
-                        >
-                          {"116"}
-                        </div>
-                      </div>
-
-                      <div
-                        data-plasmic-name={"uiOrdersByInProcessLabel3"}
-                        data-plasmic-override={
-                          overrides.uiOrdersByInProcessLabel3
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.uiOrdersByInProcessLabel3
-                        )}
-                      >
-                        {"Ready to Ship"}
-                      </div>
-                    </div>
-
-                    <div
-                      data-plasmic-name={"group42"}
-                      data-plasmic-override={overrides.group42}
-                      className={classNames(projectcss.all, sty.group42)}
-                    >
-                      <Ellipse10Icon
-                        className={classNames(projectcss.all, sty.svg__cuxcU)}
-                        role={"img"}
-                      />
-
-                      <GroupIcon
-                        className={classNames(projectcss.all, sty.svg___8XbIa)}
-                        role={"img"}
-                      />
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame77"}
-                    data-plasmic-override={overrides.frame77}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame77)}
-                  >
-                    <div
-                      data-plasmic-name={"frame84"}
-                      data-plasmic-override={overrides.frame84}
-                      className={classNames(projectcss.all, sty.frame84)}
-                    >
-                      <div
-                        data-plasmic-name={"group37"}
-                        data-plasmic-override={overrides.group37}
-                        className={classNames(projectcss.all, sty.group37)}
-                      >
-                        <div
-                          data-plasmic-name={"ordersByInProcessValue4"}
-                          data-plasmic-override={
-                            overrides.ordersByInProcessValue4
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.ordersByInProcessValue4
-                          )}
-                        >
-                          {"109"}
-                        </div>
-                      </div>
-
-                      <div
-                        data-plasmic-name={"uiOrdersByInProcessLabel4"}
-                        data-plasmic-override={
-                          overrides.uiOrdersByInProcessLabel4
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.uiOrdersByInProcessLabel4
-                        )}
-                      >
-                        {"Delivering"}
-                      </div>
-                    </div>
-
-                    <div
-                      data-plasmic-name={"group44"}
-                      data-plasmic-override={overrides.group44}
-                      className={classNames(projectcss.all, sty.group44)}
-                    >
-                      <Ellipse11Icon
-                        className={classNames(projectcss.all, sty.svg__m7EEm)}
-                        role={"img"}
-                      />
-
-                      <FulfillmentIcons2Icon
-                        className={classNames(projectcss.all, sty.svg__wovLz)}
-                        role={"img"}
-                      />
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame85"}
-                    data-plasmic-override={overrides.frame85}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame85)}
-                  >
-                    <div
-                      data-plasmic-name={"all7"}
-                      data-plasmic-override={overrides.all7}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.all7
-                      )}
-                    >
-                      {"View All"}
-                    </div>
-
-                    <ArrowRightIcon
-                      className={classNames(projectcss.all, sty.svg__sXesZ)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                </div>
+                <StatWidget3
+                  data-plasmic-name={"statWidget3"}
+                  data-plasmic-override={overrides.statWidget3}
+                  className={classNames("__wab_instance", sty.statWidget3)}
+                />
 
                 <div
                   data-plasmic-name={"dataFilterCta18"}
@@ -6858,36 +6519,8 @@ const PlasmicDescendants = {
     "invetoryStatistic",
     "orderStatsCard",
     "ordersByDayStatsCard",
-    "statsCardSalesChannel",
-    "dataFilterCta14",
-    "all6",
-    "uiOrderStatsCount4",
-    "frame81",
-    "frame74",
-    "group34",
-    "ordersByInProcessValue1",
-    "uiOrdersByInProcessLabel1",
-    "img",
-    "frame75",
-    "frame82",
-    "group35",
-    "ordersByInProcessValue2",
-    "uiOrdersByInProcessLabel2",
-    "group43",
-    "frame76",
-    "frame83",
-    "group36",
-    "ordersByInProcessValue3",
-    "uiOrdersByInProcessLabel3",
-    "group42",
-    "frame77",
-    "frame84",
-    "group37",
-    "ordersByInProcessValue4",
-    "uiOrdersByInProcessLabel4",
-    "group44",
-    "frame85",
-    "all7",
+    "statsCardMultiple",
+    "statWidget3",
     "dataFilterCta18",
     "all8",
     "dataTable",
@@ -7376,149 +7009,15 @@ const PlasmicDescendants = {
     "invetoryStatistic",
     "orderStatsCard",
     "ordersByDayStatsCard",
-    "statsCardSalesChannel",
-    "dataFilterCta14",
-    "all6",
-    "uiOrderStatsCount4",
-    "frame81",
-    "frame74",
-    "group34",
-    "ordersByInProcessValue1",
-    "uiOrdersByInProcessLabel1",
-    "img",
-    "frame75",
-    "frame82",
-    "group35",
-    "ordersByInProcessValue2",
-    "uiOrdersByInProcessLabel2",
-    "group43",
-    "frame76",
-    "frame83",
-    "group36",
-    "ordersByInProcessValue3",
-    "uiOrdersByInProcessLabel3",
-    "group42",
-    "frame77",
-    "frame84",
-    "group37",
-    "ordersByInProcessValue4",
-    "uiOrdersByInProcessLabel4",
-    "group44",
-    "frame85",
-    "all7",
+    "statsCardMultiple",
+    "statWidget3",
     "dataFilterCta18",
     "all8"
   ],
   orderStatsCard: ["orderStatsCard"],
   ordersByDayStatsCard: ["ordersByDayStatsCard"],
-  statsCardSalesChannel: ["statsCardSalesChannel"],
-  dataFilterCta14: [
-    "dataFilterCta14",
-    "all6",
-    "uiOrderStatsCount4",
-    "frame81",
-    "frame74",
-    "group34",
-    "ordersByInProcessValue1",
-    "uiOrdersByInProcessLabel1",
-    "img",
-    "frame75",
-    "frame82",
-    "group35",
-    "ordersByInProcessValue2",
-    "uiOrdersByInProcessLabel2",
-    "group43",
-    "frame76",
-    "frame83",
-    "group36",
-    "ordersByInProcessValue3",
-    "uiOrdersByInProcessLabel3",
-    "group42",
-    "frame77",
-    "frame84",
-    "group37",
-    "ordersByInProcessValue4",
-    "uiOrdersByInProcessLabel4",
-    "group44",
-    "frame85",
-    "all7"
-  ],
-  all6: ["all6"],
-  uiOrderStatsCount4: ["uiOrderStatsCount4"],
-  frame81: [
-    "frame81",
-    "frame74",
-    "group34",
-    "ordersByInProcessValue1",
-    "uiOrdersByInProcessLabel1",
-    "img"
-  ],
-  frame74: [
-    "frame74",
-    "group34",
-    "ordersByInProcessValue1",
-    "uiOrdersByInProcessLabel1"
-  ],
-  group34: ["group34", "ordersByInProcessValue1"],
-  ordersByInProcessValue1: ["ordersByInProcessValue1"],
-  uiOrdersByInProcessLabel1: ["uiOrdersByInProcessLabel1"],
-  img: ["img"],
-  frame75: [
-    "frame75",
-    "frame82",
-    "group35",
-    "ordersByInProcessValue2",
-    "uiOrdersByInProcessLabel2",
-    "group43"
-  ],
-  frame82: [
-    "frame82",
-    "group35",
-    "ordersByInProcessValue2",
-    "uiOrdersByInProcessLabel2"
-  ],
-  group35: ["group35", "ordersByInProcessValue2"],
-  ordersByInProcessValue2: ["ordersByInProcessValue2"],
-  uiOrdersByInProcessLabel2: ["uiOrdersByInProcessLabel2"],
-  group43: ["group43"],
-  frame76: [
-    "frame76",
-    "frame83",
-    "group36",
-    "ordersByInProcessValue3",
-    "uiOrdersByInProcessLabel3",
-    "group42"
-  ],
-  frame83: [
-    "frame83",
-    "group36",
-    "ordersByInProcessValue3",
-    "uiOrdersByInProcessLabel3"
-  ],
-  group36: ["group36", "ordersByInProcessValue3"],
-  ordersByInProcessValue3: ["ordersByInProcessValue3"],
-  uiOrdersByInProcessLabel3: ["uiOrdersByInProcessLabel3"],
-  group42: ["group42"],
-  frame77: [
-    "frame77",
-    "frame84",
-    "group37",
-    "ordersByInProcessValue4",
-    "uiOrdersByInProcessLabel4",
-    "group44"
-  ],
-  frame84: [
-    "frame84",
-    "group37",
-    "ordersByInProcessValue4",
-    "uiOrdersByInProcessLabel4"
-  ],
-  group37: ["group37", "ordersByInProcessValue4"],
-  ordersByInProcessValue4: ["ordersByInProcessValue4"],
-  uiOrdersByInProcessLabel4: ["uiOrdersByInProcessLabel4"],
-  group44: ["group44"],
-  frame85: ["frame85", "all7"],
-  all7: ["all7"],
+  statsCardMultiple: ["statsCardMultiple"],
+  statWidget3: ["statWidget3"],
   dataFilterCta18: ["dataFilterCta18", "all8"],
   all8: ["all8"],
   dataTable: [
@@ -10098,38 +9597,10 @@ type NodeDefaultElementType = {
   root: "div";
   topBar: typeof TopBar;
   invetoryStatistic: "div";
-  orderStatsCard: typeof StatsCard;
-  ordersByDayStatsCard: typeof StatsCard2;
-  statsCardSalesChannel: typeof StatsCardSalesChannel;
-  dataFilterCta14: "div";
-  all6: "div";
-  uiOrderStatsCount4: "div";
-  frame81: "div";
-  frame74: "div";
-  group34: "div";
-  ordersByInProcessValue1: "div";
-  uiOrdersByInProcessLabel1: "div";
-  img: typeof p.PlasmicImg;
-  frame75: "div";
-  frame82: "div";
-  group35: "div";
-  ordersByInProcessValue2: "div";
-  uiOrdersByInProcessLabel2: "div";
-  group43: "div";
-  frame76: "div";
-  frame83: "div";
-  group36: "div";
-  ordersByInProcessValue3: "div";
-  uiOrdersByInProcessLabel3: "div";
-  group42: "div";
-  frame77: "div";
-  frame84: "div";
-  group37: "div";
-  ordersByInProcessValue4: "div";
-  uiOrdersByInProcessLabel4: "div";
-  group44: "div";
-  frame85: "div";
-  all7: "div";
+  orderStatsCard: typeof StatsCardBasic;
+  ordersByDayStatsCard: typeof StatsCardDate;
+  statsCardMultiple: typeof StatsCardMultiple;
+  statWidget3: typeof StatWidget3;
   dataFilterCta18: "div";
   all8: "div";
   dataTable: "div";
@@ -10675,36 +10146,8 @@ export const PlasmicHomepage = Object.assign(
     invetoryStatistic: makeNodeComponent("invetoryStatistic"),
     orderStatsCard: makeNodeComponent("orderStatsCard"),
     ordersByDayStatsCard: makeNodeComponent("ordersByDayStatsCard"),
-    statsCardSalesChannel: makeNodeComponent("statsCardSalesChannel"),
-    dataFilterCta14: makeNodeComponent("dataFilterCta14"),
-    all6: makeNodeComponent("all6"),
-    uiOrderStatsCount4: makeNodeComponent("uiOrderStatsCount4"),
-    frame81: makeNodeComponent("frame81"),
-    frame74: makeNodeComponent("frame74"),
-    group34: makeNodeComponent("group34"),
-    ordersByInProcessValue1: makeNodeComponent("ordersByInProcessValue1"),
-    uiOrdersByInProcessLabel1: makeNodeComponent("uiOrdersByInProcessLabel1"),
-    img: makeNodeComponent("img"),
-    frame75: makeNodeComponent("frame75"),
-    frame82: makeNodeComponent("frame82"),
-    group35: makeNodeComponent("group35"),
-    ordersByInProcessValue2: makeNodeComponent("ordersByInProcessValue2"),
-    uiOrdersByInProcessLabel2: makeNodeComponent("uiOrdersByInProcessLabel2"),
-    group43: makeNodeComponent("group43"),
-    frame76: makeNodeComponent("frame76"),
-    frame83: makeNodeComponent("frame83"),
-    group36: makeNodeComponent("group36"),
-    ordersByInProcessValue3: makeNodeComponent("ordersByInProcessValue3"),
-    uiOrdersByInProcessLabel3: makeNodeComponent("uiOrdersByInProcessLabel3"),
-    group42: makeNodeComponent("group42"),
-    frame77: makeNodeComponent("frame77"),
-    frame84: makeNodeComponent("frame84"),
-    group37: makeNodeComponent("group37"),
-    ordersByInProcessValue4: makeNodeComponent("ordersByInProcessValue4"),
-    uiOrdersByInProcessLabel4: makeNodeComponent("uiOrdersByInProcessLabel4"),
-    group44: makeNodeComponent("group44"),
-    frame85: makeNodeComponent("frame85"),
-    all7: makeNodeComponent("all7"),
+    statsCardMultiple: makeNodeComponent("statsCardMultiple"),
+    statWidget3: makeNodeComponent("statWidget3"),
     dataFilterCta18: makeNodeComponent("dataFilterCta18"),
     all8: makeNodeComponent("all8"),
     dataTable: makeNodeComponent("dataTable"),

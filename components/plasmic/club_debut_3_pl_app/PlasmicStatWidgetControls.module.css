@@ -1,0 +1,51 @@
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  padding: 0px;
+}
+.closeButton {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+  border-width: 0px;
+}
+.svg {
+  object-fit: cover;
+  max-width: 14px;
+  width: 14px;
+  height: 14px;
+  max-height: 14px;
+  color: var(--token-IBRD-yvJW);
+  flex-shrink: 0;
+}
+.grabTarget {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  max-width: 100%;
+  margin-right: 0px;
+  flex-shrink: 0;
+}
+.grabIcon {
+  object-fit: cover;
+  color: var(--token-IBRD-yvJW);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}

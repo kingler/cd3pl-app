@@ -186,7 +186,7 @@ function PlasmicSidePanelComponent__RenderFunc(props: {
               sty.dashboardLink
             )}
             component={Link}
-            href={"/dashboard" as const}
+            href={"/" as const}
             platform={"nextjs"}
             target={undefined}
           >

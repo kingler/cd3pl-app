@@ -12,38 +12,37 @@ export interface paths {
       };
     };
   };
-  "/entries": {
+  "/customers": {
     get: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.entries.id"];
-          user_id?: parameters["rowFilter.entries.user_id"];
-          name?: parameters["rowFilter.entries.name"];
-          description?: parameters["rowFilter.entries.description"];
-          imageUrl?: parameters["rowFilter.entries.imageUrl"];
-          inserted_at?: parameters["rowFilter.entries.inserted_at"];
-          /** Filtering Columns */
+          id: parameters["rowFilter.customers.id"];
+          created_at:  parameters["rowFilter.customers.created_at"];
+          first_name?: parameters["rowFilter.customers.first_name"];
+          last_name?: parameters["rowFilter.customers.last_name"];
+          phone_number?: parameters["rowFilter.customers.phone_number"];
+          billing_address?:parameters["rowFilter.customers.billing_address"];
+          shipping_address?:parameters["rowFilter.customers.shipping_address"];
+          email?:parameters["rowFilter.customers.email"];
+          imageUrl?:parameters["rowFilter.customers.imageUrl"];
+          type?: parameters["rowFilter.customers.type"];
+          business_name?:parameters["rowFilter.customers.business_name"];
           select?: parameters["select"];
-          /** Ordering */
           order?: parameters["order"];
-          /** Limiting and Pagination */
           offset?: parameters["offset"];
-          /** Limiting and Pagination */
           limit?: parameters["limit"];
+          
         };
         header: {
-          /** Limiting and Pagination */
           Range?: parameters["range"];
-          /** Limiting and Pagination */
           "Range-Unit"?: parameters["rangeUnit"];
-          /** Preference */
           Prefer?: parameters["preferCount"];
         };
       };
       responses: {
         /** OK */
         200: {
-          schema: definitions["entries"][];
+          schema: definitions["customers"][];
         };
         /** Partial Content */
         206: unknown;
@@ -52,8 +51,8 @@ export interface paths {
     post: {
       parameters: {
         body: {
-          /** entries */
-          entries?: definitions["entries"];
+          /** customers */
+          customers?: definitions["customers"];
         };
         query: {
           /** Filtering Columns */
@@ -72,12 +71,17 @@ export interface paths {
     delete: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.entries.id"];
-          user_id?: parameters["rowFilter.entries.user_id"];
-          name?: parameters["rowFilter.entries.name"];
-          description?: parameters["rowFilter.entries.description"];
-          imageUrl?: parameters["rowFilter.entries.imageUrl"];
-          inserted_at?: parameters["rowFilter.entries.inserted_at"];
+          id: parameters["rowFilter.customers.id"];
+          created_at:  parameters["rowFilter.customers.created_at"];
+          first_name?: parameters["rowFilter.customers.first_name"];
+          last_name?: parameters["rowFilter.customers.last_name"];
+          phone_number?: parameters["rowFilter.customers.phone_number"];
+          billing_address?:parameters["rowFilter.customers.billing_address"];
+          shipping_address?:parameters["rowFilter.customers.shipping_address"];
+          email?:parameters["rowFilter.customers.email"];
+          imageUrl?:parameters["rowFilter.customers.imageUrl"];
+          type?: parameters["rowFilter.customers.type"];
+          business_name?:parameters["rowFilter.customers.business_name"];
         };
         header: {
           /** Preference */
@@ -92,16 +96,262 @@ export interface paths {
     patch: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.entries.id"];
-          user_id?: parameters["rowFilter.entries.user_id"];
-          name?: parameters["rowFilter.entries.name"];
-          description?: parameters["rowFilter.entries.description"];
-          imageUrl?: parameters["rowFilter.entries.imageUrl"];
-          inserted_at?: parameters["rowFilter.entries.inserted_at"];
+          id: parameters["rowFilter.customers.id"];
+          created_at:  parameters["rowFilter.customers.created_at"];
+          first_name?: parameters["rowFilter.customers.first_name"];
+          last_name?: parameters["rowFilter.customers.last_name"];
+          phone_number?: parameters["rowFilter.customers.phone_number"];
+          billing_address?:parameters["rowFilter.customers.billing_address"];
+          shipping_address?:parameters["rowFilter.customers.shipping_address"];
+          email?:parameters["rowFilter.customers.email"];
+          imageUrl?:parameters["rowFilter.customers.imageUrl"];
+          type?: parameters["rowFilter.customers.type"];
+          business_name?:parameters["rowFilter.customers.business_name"];
         };
         body: {
-          /** entries */
-          entries?: definitions["entries"];
+          /** customers */
+          customers?: definitions["customers"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** No Content */
+        204: never;
+      };
+    };
+  };
+  "/orders": {
+    get: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.orders.id"];
+          created_at:  parameters["rowFilter.orders.created_at"];
+          customer_id?: parameters["rowFilter.orders.customer_id"];
+          total_payment?: parameters["rowFilter.orders.total_payment"];
+          payment_status?: parameters["rowFilter.orders.payment_status"];
+          status_id?:parameters["rowFilter.orders.status_id"];
+          tracking?:parameters["rowFilter.orders.tracking"];
+          point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          purchase_date?:parameters["rowFilter.orders.purchase_date"];
+          item_count?: parameters["rowFilter.orders.item_count"];
+          items_id?:parameters["rowFilter.orders.items_id"];
+          select?: parameters["select"];
+          order?: parameters["order"];
+          offset?: parameters["offset"];
+          limit?: parameters["limit"];
+          
+        };
+        header: {
+          Range?: parameters["range"];
+          "Range-Unit"?: parameters["rangeUnit"];
+          Prefer?: parameters["preferCount"];
+        };
+      };
+      responses: {
+        /** OK */
+        200: {
+          schema: definitions["orders"][];
+        };
+        /** Partial Content */
+        206: unknown;
+      };
+    };
+    post: {
+      parameters: {
+        body: {
+          /** customers */
+          customers?: definitions["orders"];
+        };
+        query: {
+          /** Filtering Columns */
+          select?: parameters["select"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** Created */
+        201: unknown;
+      };
+    };
+    delete: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.orders.id"];
+          created_at:  parameters["rowFilter.orders.created_at"];
+          customer_id?: parameters["rowFilter.orders.customer_id"];
+          total_payment?: parameters["rowFilter.orders.total_payment"];
+          payment_status?: parameters["rowFilter.orders.payment_status"];
+          status_id?:parameters["rowFilter.orders.status_id"];
+          tracking?:parameters["rowFilter.orders.tracking"];
+          point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          purchase_date?:parameters["rowFilter.orders.purchase_date"];
+          item_count?: parameters["rowFilter.orders.item_count"];
+          items_id?:parameters["rowFilter.orders.items_id"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** No Content */
+        204: never;
+      };
+    };
+    patch: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.orders.id"];
+          created_at:  parameters["rowFilter.orders.created_at"];
+          customer_id?: parameters["rowFilter.orders.customer_id"];
+          total_payment?: parameters["rowFilter.orders.total_payment"];
+          payment_status?: parameters["rowFilter.orders.payment_status"];
+          status_id?:parameters["rowFilter.orders.status_id"];
+          tracking?:parameters["rowFilter.orders.tracking"];
+          point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          purchase_date?:parameters["rowFilter.orders.purchase_date"];
+          item_count?: parameters["rowFilter.orders.item_count"];
+          items_id?:parameters["rowFilter.orders.items_id"];
+        };
+        body: {
+          /** customers */
+          customers?: definitions["orders"];
+           /** orders */
+           orders?: definitions["orders"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** No Content */
+        204: never;
+      };
+    };
+  };
+  "/products": {
+    get: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.products.id"];
+          created_at:  parameters["rowFilter.products.created_at"];
+          catalog?: parameters["rowFilter.products.catalog"];
+          collection?: parameters["rowFilter.products.collection"];
+          category?: parameters["rowFilter.products.category"];
+          supplier?:parameters["rowFilter.products.supplier"];
+          imageUrl?:parameters["rowFilter.products.imageUrl"];
+          description?:parameters["rowFilter.products.description"];
+          size?:parameters["rowFilter.products.size"];
+          color?: parameters["rowFilter.products.color"];
+          sku?:parameters["rowFilter.products.sku"];
+          unit_cost?: parameters["rowFilter.products.unit_cost"];
+          margin?: parameters["rowFilter.products.margin"];
+          profit?:parameters["rowFilter.products.profit"];
+          is_published?: parameters["rowFilter.products.is_published"];
+          sale_price?: parameters["rowFilter.products.sale_price"];
+          
+          select?: parameters["select"];
+          order?: parameters["order"];
+          offset?: parameters["offset"];
+          limit?: parameters["limit"];
+        };
+        header: {
+          Range?: parameters["range"];
+          "Range-Unit"?: parameters["rangeUnit"];
+          Prefer?: parameters["preferCount"];
+        };
+      };
+      responses: {
+        /** OK */
+        200: {
+          schema: definitions["products"][];
+        };
+        /** Partial Content */
+        206: unknown;
+      };
+    };
+    post: {
+      parameters: {
+        body: {
+          /** customers */
+          customers?: definitions["products"];
+        };
+        query: {
+          /** Filtering Columns */
+          select?: parameters["select"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** Created */
+        201: unknown;
+      };
+    };
+    delete: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.products.id"];
+          created_at:  parameters["rowFilter.products.created_at"];
+          catalog?: parameters["rowFilter.products.catalog"];
+          collection?: parameters["rowFilter.products.collection"];
+          category?: parameters["rowFilter.products.category"];
+          supplier?:parameters["rowFilter.products.supplier"];
+          imageUrl?:parameters["rowFilter.products.imageUrl"];
+          description?:parameters["rowFilter.products.description"];
+          size?:parameters["rowFilter.products.size"];
+          color?: parameters["rowFilter.products.color"];
+          sku?:parameters["rowFilter.products.sku"];
+          unit_cost?: parameters["rowFilter.products.unit_cost"];
+          margin?: parameters["rowFilter.products.margin"];
+          profit?:parameters["rowFilter.products.profit"];
+          is_published?: parameters["rowFilter.products.is_published"];
+          sale_price?: parameters["rowFilter.products.sale_price"];
+        };
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"];
+        };
+      };
+      responses: {
+        /** No Content */
+        204: never;
+      };
+    };
+    patch: {
+      parameters: {
+        query: {
+          id: parameters["rowFilter.products.id"];
+          created_at:  parameters["rowFilter.products.created_at"];
+          catalog?: parameters["rowFilter.products.catalog"];
+          collection?: parameters["rowFilter.products.collection"];
+          category?: parameters["rowFilter.products.category"];
+          supplier?:parameters["rowFilter.products.supplier"];
+          imageUrl?:parameters["rowFilter.products.imageUrl"];
+          description?:parameters["rowFilter.products.description"];
+          size?:parameters["rowFilter.products.size"];
+          color?: parameters["rowFilter.products.color"];
+          sku?:parameters["rowFilter.products.sku"];
+          unit_cost?: parameters["rowFilter.products.unit_cost"];
+          margin?: parameters["rowFilter.products.margin"];
+          profit?:parameters["rowFilter.products.profit"];
+          is_published?: parameters["rowFilter.products.is_published"];
+          sale_price?: parameters["rowFilter.products.sale_price"];
+        };
+        body: {
+          /** customers */
+          customers?: definitions["products"];
+           /** products */
+           products?: definitions["products"];
         };
         header: {
           /** Preference */
@@ -117,7 +367,7 @@ export interface paths {
 }
 
 export interface definitions {
-  entries: {
+  customers: {
     /**
      * Format: bigint
      * @description Note:
@@ -125,21 +375,78 @@ export interface definitions {
      */
     id: number;
     /** Format: uuid */
-    user_id: string;
+    first_name: string;
     /** Format: text */
-    name?: string;
+    last_name?: string;
     /** Format: text */
-    description?: string;
+    phone_number?: string;
+    billing_address?: string;
+    shipping_address?: string;
+    email?: string;
+    business_name?: string;
     /** Format: text */
     imageUrl?: string;
     /**
      * Format: timestamp with time zone
      * @default (now() AT TIME ZONE 'utc'::text)
      */
-    inserted_at?: string;
+    created_at?: string;
+  };
+  orders: {
+    /**
+     * Format: bigint
+     * @description Note:
+     * This is a Primary Key.<pk/>
+     */
+    id: number;
+    /** Format: uuid */
+    customer_id: number;
+    /** Format: text */
+    total_payment?: string;
+    /** Format: text */
+    payment_status?: number;
+    status_id?: number;
+    tracking?: string;
+    point_of_sale_id?: string;
+    purchase_date?: string;
+    /**
+     * Format: timestamp with time zone
+     * @default (now() AT TIME ZONE 'utc'::text)
+     */
+    created_at?: string;
+  };
+  products: {
+    /**
+     * Format: bigint
+     * @description Note:
+     * This is a Primary Key.<pk/>
+     */
+    id: number;
+    /** Format: uuid */
+    catalog: number;
+    /** Format: text */
+    collection?: number;
+    /** Format: text */
+    category?: number;
+    supplier?: number;
+    imageUrl?: string;
+    product_name?: string;
+    description?: string;
+    size?: string;
+    color?: string;
+    sku?: string;
+    unit_cost?: number;
+    sale_price?: number;
+    margin?: number;
+    profit?: number;
+    is_published?: number;
+    /**
+     * Format: timestamp with time zone
+     * @default (now() AT TIME ZONE 'utc'::text)
+     */
+    created_at?: string;
   };
 }
-
 export interface parameters {
   /**
    * @description Preference
@@ -173,22 +480,52 @@ export interface parameters {
   offset: string;
   /** @description Limiting and Pagination */
   limit: string;
-  /** @description entries */
-  "body.entries": definitions["entries"];
-  /** Format: bigint */
-  "rowFilter.entries.id": string;
-  /** Format: uuid */
-  "rowFilter.entries.user_id": string;
-  /** Format: text */
-  "rowFilter.entries.name": string;
-  /** Format: text */
-  "rowFilter.entries.description": string;
-  /** Format: text */
-  "rowFilter.entries.imageUrl": string;
-  /** Format: timestamp with time zone */
-  "rowFilter.entries.inserted_at": string;
+  /** @description customers */
+  "body.customers": definitions["customers"];
+  "rowFilter.customers.id": string;
+  "rowFilter.customers.first_name": string;
+  "rowFilter.customers.last_name": string;
+  "rowFilter.customers.phone_number": string;
+  "rowFilter.customers.email": string;
+  "rowFilter.customers.imageUrl": string;
+  "rowFilter.customers.billing_address": string;
+  "rowFilter.customers.shipping_address": string;
+  "rowFilter.customers.type": string;
+  "rowFilter.customers.business_name": string;
+  "rowFilter.customers.created_at": string;
+  /** @description orders */
+  "body.orders": definitions["orders"];
+  "rowFilter.orders.id": string;
+  "rowFilter.orders.created_at": string;
+  "rowFilter.orders.customer_id": string;
+  "rowFilter.orders.total_payment": string;
+  "rowFilter.orders.payment_status": string;
+  "rowFilter.orders.status_id": string;
+  "rowFilter.orders.tracking": string;
+  "rowFilter.orders.point_of_sale_id": string;
+  "rowFilter.orders.purchase_date": string;
+  "rowFilter.orders.item_count": string;
+  "rowFilter.orders.items_id": string;
+   /** @description products */
+   "body.products": definitions["products"];
+   "rowFilter.products.id": string;
+   "rowFilter.products.catalog": string;
+   "rowFilter.products.collection": string;
+   "rowFilter.products.category": string;
+   "rowFilter.products.supplier": string;
+   "rowFilter.products.imageUrl": string;
+   "rowFilter.products.product_name": string;
+   "rowFilter.products.description": string;
+   "rowFilter.products.size": string;
+   "rowFilter.products.color": string;
+   "rowFilter.products.sku": string;
+   "rowFilter.products.unit_cost": string;
+   "rowFilter.products.sale_price": string;
+   "rowFilter.products.margin": string;
+   "rowFilter.products.profit": string;
+   "rowFilter.products.is_published": string;
+   "rowFilter.products.created_at": string;
 }
-
 export interface operations {}
 
 export interface external {}

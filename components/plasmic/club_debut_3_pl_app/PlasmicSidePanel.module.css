@@ -6,7 +6,7 @@
   width: 222px;
   height: 100%;
   max-width: 100%;
-  background: var(--token-O5NCBlXkQ);
+  background: none;
   position: relative;
   min-height: 0;
   padding: 0px;
@@ -16,7 +16,7 @@
 }
 .topSection {
   flex-direction: column;
-  background: var(--token-IANicBa3U);
+  background: none;
   width: 222px;
   height: 100px;
   display: flex;
@@ -100,7 +100,7 @@
 .cd3PlLogo {
   object-fit: cover;
   max-width: 100%;
-  color: #fff;
+  color: var(--token-MVJqjvLUa);
   width: 89px;
   height: 35.918px;
   display: block;
@@ -121,7 +121,7 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  background: var(--token-IANicBa3U);
+  background: none;
   padding: 8px;
   border-width: 0px;
 }
@@ -156,6 +156,7 @@
   margin-top: calc(-16px + 28px) !important;
   align-self: flex-start;
   flex-shrink: 0;
+  display: flex;
 }
 .switchContextComponentisCollapsed:global(.__wab_instance) {
   width: 70px;
@@ -169,6 +170,7 @@
 .text__fjiIt {
   color: var(--token-U_VIuvWks);
   font-size: 14px;
+  display: block;
   padding: 0px;
 }
 .textisCollapsed__fjiItuNv3L {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Open+Sans%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C800&family=Roboto%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C700%3B0%2C900&family=Open+Sans+Condensed%3Aital%2Cwght%400%2C300%3B0%2C700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B0%2C800%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700%3B1%2C800&family=Roboto%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C700%3B0%2C900%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C700%3B1%2C900&display=swap");
 
 .plasmic_tokens {
   --token-MVJqjvLUa: #008f92;
@@ -33,6 +33,12 @@
   --plasmic-token-light-teal: var(--token-YuPSKNI3l);
   --token-qjU-qfmo9: #017afa;
   --plasmic-token-primary-blue: var(--token-qjU-qfmo9);
+  --token-E2FXZqqLC: #879092;
+  --plasmic-token-grat-text-medium: var(--token-E2FXZqqLC);
+  --token-CqoRh52LW: #ff7700;
+  --plasmic-token-orange: var(--token-CqoRh52LW);
+  --token-qDsnTM3Jt: #f9ce1f;
+  --plasmic-token-warning-color: var(--token-qDsnTM3Jt);
 }
 
 .plasmic_default_styles,

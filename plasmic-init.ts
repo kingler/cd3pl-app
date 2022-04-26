@@ -81,21 +81,29 @@ PLASMIC.registerComponent(SupabaseImgField, {
 PLASMIC.registerComponent(SupabaseGrid, {
   name: "SupabaseGrid",
   props: {
-    tableName: {
+    tableName:{
       type: "choice",
-      defaultValue: "entries",
-      options: ["entries"],
+      defaultValue: "customers",
+      options: [
+        "Customers"
+      ],
     },
     tableColumns: {
       type: "choice",
       multiSelect: true,
-      options: [
+      options: 
+       [
         "id",
-        "user_id",
-        "name",
+        "first_name",
+        "last_name",
+        "phone_number",
         "imageUrl",
-        "inserted_at",
-        "description",
+        "created_at",
+        "billing_address",
+        "shipping_address",
+        "email",
+        "type",
+        "business_name"
       ],
     },
     queryFilters: "object",
@@ -128,7 +136,73 @@ PLASMIC.registerComponent(SupabaseGrid, {
     },
   },
   importPath: "./components/CodeComponents/DisplayCollections",
-});
+},);
+
+PLASMIC.registerComponent(SupabaseGrid, {
+  name: "SupabaseGridProducts",
+  props: {
+    tableName: {
+      type: "choice",
+      defaultValue: "Products",
+      options: [
+        "Products"
+      ],
+    },
+    tableColumns: {
+      type: "choice",
+      multiSelect: true,
+      options: 
+       [
+        "id",
+        "catalog",
+        "collection",
+        "category",
+        "supplier",
+        "imageUrl",
+        "product_name",
+        "description",
+        "size",
+        "color",
+        "sku",
+        "unit_cost",
+        "sale_price",
+        "margin",
+        "profit",
+        "is_published",
+      ],
+    },
+    
+    queryFilters: "object",
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Placeholder",
+      },
+    },
+    numColumns: {
+      type: "number",
+      defaultValue: 4,
+    },
+    columnGap: {
+      type: "number",
+      defaultValue: 16,
+    },
+    rowGap: {
+      type: "number",
+      defaultValue: 16,
+    },
+    count: "number",
+    loading: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Loading...",
+      },
+    },
+  },
+  importPath: "./components/CodeComponents/DisplayCollections",
+},);
 
 PLASMIC.registerComponent(SupabaseGridCollection, {
   name: "SupabaseGridCollection",

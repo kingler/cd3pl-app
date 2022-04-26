@@ -35,7 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import AuthComponent from "../../AuthComponent"; // plasmic-import: nY2U_rP0qI/component
-import LogoComponent from "../../LogoComponent"; // plasmic-import: cwOpUPrWbw/component
+import LogoComponent from "../..LogoComponent"; // plasmic-import: cwOpUPrWbw/component
 
 import { useScreenVariants as useScreenVariants_6JfnloVhzca } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 6JfnloVhzca/globalVariant
 

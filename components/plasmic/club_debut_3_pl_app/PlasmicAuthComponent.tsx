@@ -582,7 +582,7 @@ function PlasmicAuthComponent__RenderFunc(props: {
                   link={
                     hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
                       ? ("/onboarding" as const)
-                      : ("/" as const)
+                      : ("/homepage" as const)
                   }
                   showStartIcon={true}
                   startIcon={

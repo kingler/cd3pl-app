@@ -34,9 +34,24 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import SidePanelComponent from "../../SidePanelComponent"; // plasmic-import: kMAT7d_nPjC/component
+import SidePanel from "../../SidePanel"; // plasmic-import: 6cCQxsGyn8Z/component
+import { Dropdown } from "@plasmicpkgs/antd"; // plasmic-import: cv59X4q0WK/codeComponent
+import Menu from "antd/lib/menu/index"; // plasmic-import: Iz_hLKpHZDg/codeComponent
+import MenuItem from "antd/lib/menu/MenuItem"; // plasmic-import: HZ6EmQgIQJr/codeComponent
+import SubMenu from "antd/lib/menu/SubMenu"; // plasmic-import: DSwQm8gUYob/codeComponent
+import Search from "antd/lib/input/Search"; // plasmic-import: zDcn8vsMldu/codeComponent
 import TopBar from "../../TopBar"; // plasmic-import: CBtIl4cHm9/component
 import Button from "../../Button"; // plasmic-import: iZavS5akl9G/component
+import StatsCardBasic from "../../StatsCardBasic"; // plasmic-import: V8KmQ7KGSy/component
+import StatsCardDate from "../../StatsCardDate"; // plasmic-import: YFRpRP19Qn1/component
+import StatsCardMultiple from "../../StatsCardMultiple"; // plasmic-import: 5U-Zs7sqEeG/component
+import StatWidget3 from "../../StatWidget3"; // plasmic-import: AIDP5SC9DqO/component
+import StatInventory from "../../StatInventory"; // plasmic-import: kwyrWxlOQ3/component
+import StatCardWidget4 from "../../StatCardWidget4"; // plasmic-import: oQTDjkPKlg/component
+import StatInventory2 from "../../StatInventory2"; // plasmic-import: 627OkF35An/component
+import ProductImage from "../../ProductImage"; // plasmic-import: vC1Cin3KZQ/component
+
+import { useScreenVariants as useScreenVariants_6JfnloVhzca } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 6JfnloVhzca/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -48,6 +63,10 @@ import IconimportIconIcon from "./icons/PlasmicIcon__IconimportIcon"; // plasmic
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: zGfmmTFBuGj/icon
 import IcondownIconIcon from "./icons/PlasmicIcon__IcondownIcon"; // plasmic-import: 0-rTnaDj68/icon
 import AppIcons5Icon from "./icons/PlasmicIcon__AppIcons5"; // plasmic-import: 7I9cVdZlI5O/icon
+import Intakesvg3Icon from "./icons/PlasmicIcon__Intakesvg3"; // plasmic-import: JATz_rnVL/icon
+import FulfillmentIconsIcon from "./icons/PlasmicIcon__FulfillmentIcons"; // plasmic-import: xCxuE92vDyw/icon
+import GroupIcon from "./icons/PlasmicIcon__Group"; // plasmic-import: SgAzxeatqRv/icon
+import FulfillmentIcons2Icon from "./icons/PlasmicIcon__FulfillmentIcons2"; // plasmic-import: seUp9jdHXGK/icon
 
 export type PlasmicDashboard__VariantMembers = {};
 
@@ -62,13 +81,62 @@ export const PlasmicDashboard__ArgProps = new Array<ArgPropType>();
 export type PlasmicDashboard__OverridesType = {
   dashboardPage?: p.Flex<"div">;
   mainContainer?: p.Flex<"div">;
-  sidePanelComponent?: p.Flex<typeof SidePanelComponent>;
-  freeBox?: p.Flex<"div">;
+  sidePanel?: p.Flex<typeof SidePanel>;
+  antdDropdown?: p.Flex<typeof Dropdown>;
+  antdInputSearch?: p.Flex<typeof Search>;
   topBar?: p.Flex<typeof TopBar>;
   dashboardIcon?: p.Flex<"svg">;
   importButton?: p.Flex<typeof Button>;
   exportButton?: p.Flex<typeof Button>;
   addOrderButton?: p.Flex<typeof Button>;
+  totalRevenu?: p.Flex<"div">;
+  statsCardDate?: p.Flex<typeof StatsCardDate>;
+  totalRevenu2?: p.Flex<"div">;
+  totalRevenu3?: p.Flex<"div">;
+  statsCardMultiple?: p.Flex<typeof StatsCardMultiple>;
+  statWidget3?: p.Flex<typeof StatWidget3>;
+  totalRevenu5?: p.Flex<"div">;
+  statInventory?: p.Flex<typeof StatInventory>;
+  statCardWidget4?: p.Flex<typeof StatCardWidget4>;
+  statInventory2?: p.Flex<typeof StatInventory2>;
+  totalLowStockItems?: p.Flex<"div">;
+  totalLowStockCount?: p.Flex<"div">;
+  lowProductImage1?: p.Flex<typeof ProductImage>;
+  lowProductImage2?: p.Flex<typeof ProductImage>;
+  lowProductImage3?: p.Flex<typeof ProductImage>;
+  totalLowStockTitle?: p.Flex<"div">;
+  totalOutStockCount?: p.Flex<"div">;
+  outofStockImage1?: p.Flex<typeof ProductImage>;
+  outofStockImage2?: p.Flex<typeof ProductImage>;
+  image2?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage3?: p.Flex<typeof ProductImage>;
+  image3?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage4?: p.Flex<typeof ProductImage>;
+  image4?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage5?: p.Flex<typeof ProductImage>;
+  image5?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage6?: p.Flex<typeof ProductImage>;
+  image6?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage7?: p.Flex<typeof ProductImage>;
+  image7?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage8?: p.Flex<typeof ProductImage>;
+  image8?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage9?: p.Flex<typeof ProductImage>;
+  image9?: p.Flex<typeof p.PlasmicImg>;
+  outofStockImage10?: p.Flex<typeof ProductImage>;
+  image10?: p.Flex<typeof p.PlasmicImg>;
+  totalBackOrderTitle?: p.Flex<"div">;
+  totalBackOrderCount?: p.Flex<"div">;
+  backOrdersStockImage1?: p.Flex<typeof ProductImage>;
+  image11?: p.Flex<typeof p.PlasmicImg>;
+  backOrdersStockImage2?: p.Flex<typeof ProductImage>;
+  image12?: p.Flex<typeof p.PlasmicImg>;
+  backOrdersStockImage3?: p.Flex<typeof ProductImage>;
+  image13?: p.Flex<typeof p.PlasmicImg>;
+  backOrdersStockImage4?: p.Flex<typeof ProductImage>;
+  image14?: p.Flex<typeof p.PlasmicImg>;
+  backOrdersStockImage5?: p.Flex<typeof ProductImage>;
+  image15?: p.Flex<typeof p.PlasmicImg>;
 };
 
 export interface DefaultDashboardProps {}
@@ -82,6 +150,10 @@ function PlasmicDashboard__RenderFunc(props: {
 }) {
   const { variants, args, overrides, forNode } = props;
   const $props = props.args;
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants_6JfnloVhzca()
+  });
 
   return (
     <React.Fragment>
@@ -118,124 +190,1345 @@ function PlasmicDashboard__RenderFunc(props: {
               data-plasmic-override={overrides.mainContainer}
               className={classNames(projectcss.all, sty.mainContainer)}
             >
-              <SidePanelComponent
-                data-plasmic-name={"sidePanelComponent"}
-                data-plasmic-override={overrides.sidePanelComponent}
-                className={classNames("__wab_instance", sty.sidePanelComponent)}
-              />
+              {true ? (
+                <SidePanel
+                  data-plasmic-name={"sidePanel"}
+                  data-plasmic-override={overrides.sidePanel}
+                  className={classNames("__wab_instance", sty.sidePanel)}
+                  isCollapsed={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? true
+                      : undefined
+                  }
+                />
+              ) : null}
 
-              <div
-                data-plasmic-name={"freeBox"}
-                data-plasmic-override={overrides.freeBox}
-                className={classNames(projectcss.all, sty.freeBox)}
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox___8YUsb)}
               >
-                <TopBar
-                  data-plasmic-name={"topBar"}
-                  data-plasmic-override={overrides.topBar}
-                  addOrderButton={
-                    true ? (
-                      <Button
-                        data-plasmic-name={"addOrderButton"}
-                        data-plasmic-override={overrides.addOrderButton}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.addOrderButton
-                        )}
-                        color={"teal" as const}
-                        showStartIcon={true}
-                        startIcon={
-                          <AppIcons5Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___3Xb0R
-                            )}
-                            role={"img"}
-                          />
-                        }
-                      >
-                        {"Add an order"}
-                      </Button>
-                    ) : null
-                  }
-                  className={classNames("__wab_instance", sty.topBar)}
-                  exportButton={
-                    true ? (
-                      <Button
-                        data-plasmic-name={"exportButton"}
-                        data-plasmic-override={overrides.exportButton}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.exportButton
-                        )}
-                        color={"link" as const}
-                        showStartIcon={true}
-                        startIcon={
-                          <IcondownIconIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__zFkF6
-                            )}
-                            role={"img"}
-                          />
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___8Yj7D
-                          )}
-                        >
-                          {"Export"}
-                        </div>
-                      </Button>
-                    ) : null
-                  }
-                  importButton={
-                    true ? (
-                      <Button
-                        data-plasmic-name={"importButton"}
-                        data-plasmic-override={overrides.importButton}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.importButton
-                        )}
-                        color={"link" as const}
-                        showStartIcon={true}
-                        startIcon={
-                          <IconimportIconIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__q6BV
-                            )}
-                            role={"img"}
-                          />
-                        }
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__cTm7N
-                          )}
-                        >
-                          {"Import"}
-                        </div>
-                      </Button>
-                    ) : null
-                  }
-                  ordersIcon={
-                    <AppIcons6Icon
-                      data-plasmic-name={"dashboardIcon"}
-                      data-plasmic-override={overrides.dashboardIcon}
-                      className={classNames(projectcss.all, sty.dashboardIcon)}
-                      role={"img"}
-                    />
-                  }
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__bDo0)}
                 >
-                  {"Dashboard"}
-                </TopBar>
-              </div>
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__eF60S)}
+                    >
+                      <Dropdown
+                        data-plasmic-name={"antdDropdown"}
+                        data-plasmic-override={overrides.antdDropdown}
+                        arrow={false}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.antdDropdown
+                        )}
+                        overlay={
+                          <Menu
+                            className={classNames(
+                              "__wab_instance",
+                              sty.antdMenu__daTw
+                            )}
+                          >
+                            <MenuItem
+                              className={classNames(
+                                "__wab_instance",
+                                sty.antdMenuItem__nkfs
+                              )}
+                              key={"menuItemKey" as const}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__vnkV4
+                                )}
+                              >
+                                {"Option"}
+                              </div>
+                            </MenuItem>
+
+                            <SubMenu
+                              className={classNames(
+                                "__wab_instance",
+                                sty.antdSubMenu__ygyQq
+                              )}
+                              key={"subMenuKey" as const}
+                              title={
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__pdbZk
+                                  )}
+                                >
+                                  {"Sub-menu"}
+                                </div>
+                              }
+                            >
+                              <MenuItem
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.antdMenuItem__fHibq
+                                )}
+                                key={"subMenuItemKey1" as const}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__uF81F
+                                  )}
+                                >
+                                  {"Sub-menu item 1"}
+                                </div>
+                              </MenuItem>
+
+                              <MenuItem
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.antdMenuItem__yRgxu
+                                )}
+                                key={"subMenuItemKey2" as const}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___6STpW
+                                  )}
+                                >
+                                  {"Sub-menu item 2"}
+                                </div>
+                              </MenuItem>
+                            </SubMenu>
+                          </Menu>
+                        }
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__qTFtg
+                          )}
+                        >
+                          {"Dropdown"}
+                        </div>
+                      </Dropdown>
+                    </div>
+                  ) : null}
+                  {true ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xbXr2)}
+                    >
+                      <Search
+                        data-plasmic-name={"antdInputSearch"}
+                        data-plasmic-override={overrides.antdInputSearch}
+                        bordered={false}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.antdInputSearch
+                        )}
+                        placeholder={"Search" as const}
+                        size={"large" as const}
+                      />
+                    </div>
+                  ) : null}
+                </p.Stack>
+
+                {true ? (
+                  <TopBar
+                    data-plasmic-name={"topBar"}
+                    data-plasmic-override={overrides.topBar}
+                    addOrderButton={
+                      true ? (
+                        <Button
+                          data-plasmic-name={"addOrderButton"}
+                          data-plasmic-override={overrides.addOrderButton}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.addOrderButton
+                          )}
+                          color={"teal" as const}
+                          showStartIcon={true}
+                          startIcon={
+                            <AppIcons5Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg___3Xb0R
+                              )}
+                              role={"img"}
+                            />
+                          }
+                        >
+                          {"Add an order"}
+                        </Button>
+                      ) : null
+                    }
+                    className={classNames("__wab_instance", sty.topBar)}
+                    exportButton={
+                      true ? (
+                        <Button
+                          data-plasmic-name={"exportButton"}
+                          data-plasmic-override={overrides.exportButton}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.exportButton
+                          )}
+                          color={"link" as const}
+                          showStartIcon={true}
+                          startIcon={
+                            <IcondownIconIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__zFkF6
+                              )}
+                              role={"img"}
+                            />
+                          }
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___8Yj7D
+                            )}
+                          >
+                            {"Export"}
+                          </div>
+                        </Button>
+                      ) : null
+                    }
+                    importButton={
+                      true ? (
+                        <Button
+                          data-plasmic-name={"importButton"}
+                          data-plasmic-override={overrides.importButton}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.importButton
+                          )}
+                          color={"link" as const}
+                          showStartIcon={true}
+                          startIcon={
+                            <IconimportIconIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__q6BV
+                              )}
+                              role={"img"}
+                            />
+                          }
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__cTm7N
+                            )}
+                          >
+                            {"Import"}
+                          </div>
+                        </Button>
+                      ) : null
+                    }
+                    ordersIcon={
+                      <AppIcons6Icon
+                        data-plasmic-name={"dashboardIcon"}
+                        data-plasmic-override={overrides.dashboardIcon}
+                        className={classNames(
+                          projectcss.all,
+                          sty.dashboardIcon
+                        )}
+                        role={"img"}
+                      />
+                    }
+                  >
+                    {"Dashboard"}
+                  </TopBar>
+                ) : null}
+                {true ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__di5Cp)}
+                  >
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ikVx
+                        )}
+                      >
+                        <StatsCardBasic
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardBasic__joNfK
+                          )}
+                          label={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__mf4En
+                                )}
+                              >
+                                {"Total Revenue"}
+                              </div>
+                            ) : null
+                          }
+                          slot={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__i3HN1
+                              )}
+                            >
+                              {"122,472"}
+                            </div>
+                          }
+                          totalRevenue={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                data-plasmic-name={"totalRevenu"}
+                                data-plasmic-override={overrides.totalRevenu}
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalRevenu,
+                                  "totalValue" as const
+                                )}
+                              >
+                                {"$1.8 mil"}
+                              </div>
+                            ) : null
+                          }
+                        />
+
+                        <StatsCardDate
+                          data-plasmic-name={"statsCardDate"}
+                          data-plasmic-override={overrides.statsCardDate}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardDate
+                          )}
+                        />
+
+                        <StatsCardBasic
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardBasic__nt5ZW
+                          )}
+                          label={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__hH6R
+                                )}
+                              >
+                                {"Total Revenue"}
+                              </div>
+                            ) : null
+                          }
+                          totalRevenue={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                data-plasmic-name={"totalRevenu2"}
+                                data-plasmic-override={overrides.totalRevenu2}
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalRevenu2,
+                                  "totalValue" as const
+                                )}
+                              >
+                                {"$1.8 mil"}
+                              </div>
+                            ) : null
+                          }
+                        />
+
+                        <StatsCardBasic
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardBasic__uaG
+                          )}
+                          label={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__es8WY
+                                )}
+                              >
+                                {"Total Revenue"}
+                              </div>
+                            ) : null
+                          }
+                          totalRevenue={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                data-plasmic-name={"totalRevenu3"}
+                                data-plasmic-override={overrides.totalRevenu3}
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalRevenu3,
+                                  "totalValue" as const
+                                )}
+                              >
+                                {"$1.8 mil"}
+                              </div>
+                            ) : null
+                          }
+                        />
+                      </p.Stack>
+                    ) : null}
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__rvvAy
+                        )}
+                      >
+                        <StatsCardMultiple
+                          data-plasmic-name={"statsCardMultiple"}
+                          data-plasmic-override={overrides.statsCardMultiple}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardMultiple
+                          )}
+                        />
+
+                        <StatWidget3
+                          data-plasmic-name={"statWidget3"}
+                          data-plasmic-override={overrides.statWidget3}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statWidget3
+                          )}
+                        />
+
+                        <StatsCardBasic
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statsCardBasic__zKn0D
+                          )}
+                          label={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__imkky
+                                )}
+                              >
+                                {"Total Revenue"}
+                              </div>
+                            ) : null
+                          }
+                          totalRevenue={
+                            (
+                              hasVariant(globalVariants, "screen", "mobile")
+                                ? true
+                                : true
+                            ) ? (
+                              <div
+                                data-plasmic-name={"totalRevenu5"}
+                                data-plasmic-override={overrides.totalRevenu5}
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalRevenu5,
+                                  "totalValue" as const
+                                )}
+                              >
+                                {"$1.8 mil"}
+                              </div>
+                            ) : null
+                          }
+                        />
+                      </p.Stack>
+                    ) : null}
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__mkL34
+                        )}
+                      >
+                        <StatInventory
+                          data-plasmic-name={"statInventory"}
+                          data-plasmic-override={overrides.statInventory}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statInventory
+                          )}
+                          slot={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__jsYu1
+                              )}
+                            >
+                              {"63,258"}
+                            </div>
+                          }
+                        />
+
+                        <StatCardWidget4
+                          data-plasmic-name={"statCardWidget4"}
+                          data-plasmic-override={overrides.statCardWidget4}
+                          children6={
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img___75Xmv)}
+                              displayHeight={"80px" as const}
+                              displayMaxHeight={"none" as const}
+                              displayMaxWidth={"100%" as const}
+                              displayMinHeight={"0" as const}
+                              displayMinWidth={"0" as const}
+                              displayWidth={"80px" as const}
+                              loading={"lazy" as const}
+                              src={{
+                                src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtpng.png",
+                                fullWidth: 1250,
+                                fullHeight: 1262,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          }
+                          children7={
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__qcjar)}
+                              displayHeight={"80px" as const}
+                              displayMaxHeight={"none" as const}
+                              displayMaxWidth={"100%" as const}
+                              displayMinHeight={"0" as const}
+                              displayMinWidth={"0" as const}
+                              displayWidth={"80px" as const}
+                              loading={"lazy" as const}
+                              src={{
+                                src: "/plasmic/club_debut_3_pl_app/images/floridaCollageTshirtGraypng.png",
+                                fullWidth: 1588,
+                                fullHeight: 1608,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          }
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statCardWidget4
+                          )}
+                        >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img___6VXj)}
+                            displayHeight={"80px" as const}
+                            displayMaxHeight={"none" as const}
+                            displayMaxWidth={"100%" as const}
+                            displayMinHeight={"0" as const}
+                            displayMinWidth={"0" as const}
+                            displayWidth={"80px" as const}
+                            loading={"lazy" as const}
+                            src={{
+                              src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWashBluepng.png",
+                              fullWidth: 1588,
+                              fullHeight: 1608,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </StatCardWidget4>
+
+                        <StatInventory2
+                          data-plasmic-name={"statInventory2"}
+                          data-plasmic-override={overrides.statInventory2}
+                          accordion={"isExpanded1" as const}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.statInventory2
+                          )}
+                        >
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__aYJz
+                            )}
+                          >
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__vAzfx
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={"totalLowStockItems"}
+                                data-plasmic-override={
+                                  overrides.totalLowStockItems
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalLowStockItems
+                                )}
+                              >
+                                {"Low Stock"}
+                              </div>
+
+                              <div
+                                data-plasmic-name={"totalLowStockCount"}
+                                data-plasmic-override={
+                                  overrides.totalLowStockCount
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalLowStockCount
+                                )}
+                              >
+                                {"3 Items"}
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__zYu60
+                                )}
+                              >
+                                <ProductImage
+                                  data-plasmic-name={"lowProductImage1"}
+                                  data-plasmic-override={
+                                    overrides.lowProductImage1
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.lowProductImage1
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      alt={""}
+                                      className={classNames(sty.img__hToSj)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"lowProductImage2"}
+                                  data-plasmic-override={
+                                    overrides.lowProductImage2
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.lowProductImage2
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      alt={""}
+                                      className={classNames(sty.img__sHgzi)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"lowProductImage3"}
+                                  data-plasmic-override={
+                                    overrides.lowProductImage3
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.lowProductImage3
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      alt={""}
+                                      className={classNames(sty.img__jpbng)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+                              </div>
+                            </p.Stack>
+
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__vAidl
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__kn30L
+                                )}
+                              >
+                                <div
+                                  data-plasmic-name={"totalLowStockTitle"}
+                                  data-plasmic-override={
+                                    overrides.totalLowStockTitle
+                                  }
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.totalLowStockTitle
+                                  )}
+                                >
+                                  {"Out of Stock"}
+                                </div>
+
+                                <div
+                                  data-plasmic-name={"totalOutStockCount"}
+                                  data-plasmic-override={
+                                    overrides.totalOutStockCount
+                                  }
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.totalOutStockCount
+                                  )}
+                                >
+                                  {"10 Items"}
+                                </div>
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__vGeuO
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__uLvo
+                                  )}
+                                >
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage1"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage1
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage1
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        alt={""}
+                                        className={classNames(sty.img__oz5Lu)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage2"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage2
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage2
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image2"}
+                                        data-plasmic-override={overrides.image2}
+                                        alt={""}
+                                        className={classNames(sty.image2)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage3"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage3
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage3
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image3"}
+                                        data-plasmic-override={overrides.image3}
+                                        alt={""}
+                                        className={classNames(sty.image3)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage4"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage4
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage4
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image4"}
+                                        data-plasmic-override={overrides.image4}
+                                        alt={""}
+                                        className={classNames(sty.image4)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage5"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage5
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage5
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image5"}
+                                        data-plasmic-override={overrides.image5}
+                                        alt={""}
+                                        className={classNames(sty.image5)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+                                </div>
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__dsuOp
+                                  )}
+                                >
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage6"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage6
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage6
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image6"}
+                                        data-plasmic-override={overrides.image6}
+                                        alt={""}
+                                        className={classNames(sty.image6)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage7"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage7
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage7
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image7"}
+                                        data-plasmic-override={overrides.image7}
+                                        alt={""}
+                                        className={classNames(sty.image7)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage8"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage8
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage8
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image8"}
+                                        data-plasmic-override={overrides.image8}
+                                        alt={""}
+                                        className={classNames(sty.image8)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage9"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage9
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage9
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image9"}
+                                        data-plasmic-override={overrides.image9}
+                                        alt={""}
+                                        className={classNames(sty.image9)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+
+                                  <ProductImage
+                                    data-plasmic-name={"outofStockImage10"}
+                                    data-plasmic-override={
+                                      overrides.outofStockImage10
+                                    }
+                                    className={classNames(
+                                      "__wab_instance",
+                                      sty.outofStockImage10
+                                    )}
+                                    image={
+                                      <p.PlasmicImg
+                                        data-plasmic-name={"image10"}
+                                        data-plasmic-override={
+                                          overrides.image10
+                                        }
+                                        alt={""}
+                                        className={classNames(sty.image10)}
+                                        displayHeight={"80px" as const}
+                                        displayMaxHeight={"none" as const}
+                                        displayMaxWidth={"100%" as const}
+                                        displayMinHeight={"0" as const}
+                                        displayMinWidth={"0" as const}
+                                        displayWidth={"80px" as const}
+                                        loading={"lazy" as const}
+                                        src={{
+                                          src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                          fullWidth: 1588,
+                                          fullHeight: 1608,
+                                          aspectRatio: undefined
+                                        }}
+                                      />
+                                    }
+                                  />
+                                </div>
+                              </div>
+                            </p.Stack>
+
+                            <p.Stack
+                              as={"div"}
+                              hasGap={true}
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___7He5N
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={"totalBackOrderTitle"}
+                                data-plasmic-override={
+                                  overrides.totalBackOrderTitle
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalBackOrderTitle
+                                )}
+                              >
+                                {"Back Order"}
+                              </div>
+
+                              <div
+                                data-plasmic-name={"totalBackOrderCount"}
+                                data-plasmic-override={
+                                  overrides.totalBackOrderCount
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.totalBackOrderCount
+                                )}
+                              >
+                                {"5 Items"}
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__lBoz0
+                                )}
+                              >
+                                <ProductImage
+                                  data-plasmic-name={"backOrdersStockImage1"}
+                                  data-plasmic-override={
+                                    overrides.backOrdersStockImage1
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.backOrdersStockImage1
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      data-plasmic-name={"image11"}
+                                      data-plasmic-override={overrides.image11}
+                                      alt={""}
+                                      className={classNames(sty.image11)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"backOrdersStockImage2"}
+                                  data-plasmic-override={
+                                    overrides.backOrdersStockImage2
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.backOrdersStockImage2
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      data-plasmic-name={"image12"}
+                                      data-plasmic-override={overrides.image12}
+                                      alt={""}
+                                      className={classNames(sty.image12)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"backOrdersStockImage3"}
+                                  data-plasmic-override={
+                                    overrides.backOrdersStockImage3
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.backOrdersStockImage3
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      data-plasmic-name={"image13"}
+                                      data-plasmic-override={overrides.image13}
+                                      alt={""}
+                                      className={classNames(sty.image13)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"backOrdersStockImage4"}
+                                  data-plasmic-override={
+                                    overrides.backOrdersStockImage4
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.backOrdersStockImage4
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      data-plasmic-name={"image14"}
+                                      data-plasmic-override={overrides.image14}
+                                      alt={""}
+                                      className={classNames(sty.image14)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+
+                                <ProductImage
+                                  data-plasmic-name={"backOrdersStockImage5"}
+                                  data-plasmic-override={
+                                    overrides.backOrdersStockImage5
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.backOrdersStockImage5
+                                  )}
+                                  image={
+                                    <p.PlasmicImg
+                                      data-plasmic-name={"image15"}
+                                      data-plasmic-override={overrides.image15}
+                                      alt={""}
+                                      className={classNames(sty.image15)}
+                                      displayHeight={"80px" as const}
+                                      displayMaxHeight={"none" as const}
+                                      displayMaxWidth={"100%" as const}
+                                      displayMinHeight={"0" as const}
+                                      displayMinWidth={"0" as const}
+                                      displayWidth={"80px" as const}
+                                      loading={"lazy" as const}
+                                      src={{
+                                        src: "/plasmic/club_debut_3_pl_app/images/floridaTshirtWhitepng.png",
+                                        fullWidth: 1588,
+                                        fullHeight: 1608,
+                                        aspectRatio: undefined
+                                      }}
+                                    />
+                                  }
+                                />
+                              </div>
+                            </p.Stack>
+                          </p.Stack>
+                        </StatInventory2>
+                      </p.Stack>
+                    ) : null}
+                  </p.Stack>
+                ) : null}
+              </p.Stack>
             </div>
           ) : null}
         </div>
@@ -248,33 +1541,125 @@ const PlasmicDescendants = {
   dashboardPage: [
     "dashboardPage",
     "mainContainer",
-    "sidePanelComponent",
-    "freeBox",
+    "sidePanel",
+    "antdDropdown",
+    "antdInputSearch",
     "topBar",
     "dashboardIcon",
     "importButton",
     "exportButton",
-    "addOrderButton"
+    "addOrderButton",
+    "totalRevenu",
+    "statsCardDate",
+    "totalRevenu2",
+    "totalRevenu3",
+    "statsCardMultiple",
+    "statWidget3",
+    "totalRevenu5",
+    "statInventory",
+    "statCardWidget4",
+    "statInventory2",
+    "totalLowStockItems",
+    "totalLowStockCount",
+    "lowProductImage1",
+    "lowProductImage2",
+    "lowProductImage3",
+    "totalLowStockTitle",
+    "totalOutStockCount",
+    "outofStockImage1",
+    "outofStockImage2",
+    "image2",
+    "outofStockImage3",
+    "image3",
+    "outofStockImage4",
+    "image4",
+    "outofStockImage5",
+    "image5",
+    "outofStockImage6",
+    "image6",
+    "outofStockImage7",
+    "image7",
+    "outofStockImage8",
+    "image8",
+    "outofStockImage9",
+    "image9",
+    "outofStockImage10",
+    "image10",
+    "totalBackOrderTitle",
+    "totalBackOrderCount",
+    "backOrdersStockImage1",
+    "image11",
+    "backOrdersStockImage2",
+    "image12",
+    "backOrdersStockImage3",
+    "image13",
+    "backOrdersStockImage4",
+    "image14",
+    "backOrdersStockImage5",
+    "image15"
   ],
   mainContainer: [
     "mainContainer",
-    "sidePanelComponent",
-    "freeBox",
+    "sidePanel",
+    "antdDropdown",
+    "antdInputSearch",
     "topBar",
     "dashboardIcon",
     "importButton",
     "exportButton",
-    "addOrderButton"
+    "addOrderButton",
+    "totalRevenu",
+    "statsCardDate",
+    "totalRevenu2",
+    "totalRevenu3",
+    "statsCardMultiple",
+    "statWidget3",
+    "totalRevenu5",
+    "statInventory",
+    "statCardWidget4",
+    "statInventory2",
+    "totalLowStockItems",
+    "totalLowStockCount",
+    "lowProductImage1",
+    "lowProductImage2",
+    "lowProductImage3",
+    "totalLowStockTitle",
+    "totalOutStockCount",
+    "outofStockImage1",
+    "outofStockImage2",
+    "image2",
+    "outofStockImage3",
+    "image3",
+    "outofStockImage4",
+    "image4",
+    "outofStockImage5",
+    "image5",
+    "outofStockImage6",
+    "image6",
+    "outofStockImage7",
+    "image7",
+    "outofStockImage8",
+    "image8",
+    "outofStockImage9",
+    "image9",
+    "outofStockImage10",
+    "image10",
+    "totalBackOrderTitle",
+    "totalBackOrderCount",
+    "backOrdersStockImage1",
+    "image11",
+    "backOrdersStockImage2",
+    "image12",
+    "backOrdersStockImage3",
+    "image13",
+    "backOrdersStockImage4",
+    "image14",
+    "backOrdersStockImage5",
+    "image15"
   ],
-  sidePanelComponent: ["sidePanelComponent"],
-  freeBox: [
-    "freeBox",
-    "topBar",
-    "dashboardIcon",
-    "importButton",
-    "exportButton",
-    "addOrderButton"
-  ],
+  sidePanel: ["sidePanel"],
+  antdDropdown: ["antdDropdown"],
+  antdInputSearch: ["antdInputSearch"],
   topBar: [
     "topBar",
     "dashboardIcon",
@@ -285,7 +1670,95 @@ const PlasmicDescendants = {
   dashboardIcon: ["dashboardIcon"],
   importButton: ["importButton"],
   exportButton: ["exportButton"],
-  addOrderButton: ["addOrderButton"]
+  addOrderButton: ["addOrderButton"],
+  totalRevenu: ["totalRevenu"],
+  statsCardDate: ["statsCardDate"],
+  totalRevenu2: ["totalRevenu2"],
+  totalRevenu3: ["totalRevenu3"],
+  statsCardMultiple: ["statsCardMultiple"],
+  statWidget3: ["statWidget3"],
+  totalRevenu5: ["totalRevenu5"],
+  statInventory: ["statInventory"],
+  statCardWidget4: ["statCardWidget4"],
+  statInventory2: [
+    "statInventory2",
+    "totalLowStockItems",
+    "totalLowStockCount",
+    "lowProductImage1",
+    "lowProductImage2",
+    "lowProductImage3",
+    "totalLowStockTitle",
+    "totalOutStockCount",
+    "outofStockImage1",
+    "outofStockImage2",
+    "image2",
+    "outofStockImage3",
+    "image3",
+    "outofStockImage4",
+    "image4",
+    "outofStockImage5",
+    "image5",
+    "outofStockImage6",
+    "image6",
+    "outofStockImage7",
+    "image7",
+    "outofStockImage8",
+    "image8",
+    "outofStockImage9",
+    "image9",
+    "outofStockImage10",
+    "image10",
+    "totalBackOrderTitle",
+    "totalBackOrderCount",
+    "backOrdersStockImage1",
+    "image11",
+    "backOrdersStockImage2",
+    "image12",
+    "backOrdersStockImage3",
+    "image13",
+    "backOrdersStockImage4",
+    "image14",
+    "backOrdersStockImage5",
+    "image15"
+  ],
+  totalLowStockItems: ["totalLowStockItems"],
+  totalLowStockCount: ["totalLowStockCount"],
+  lowProductImage1: ["lowProductImage1"],
+  lowProductImage2: ["lowProductImage2"],
+  lowProductImage3: ["lowProductImage3"],
+  totalLowStockTitle: ["totalLowStockTitle"],
+  totalOutStockCount: ["totalOutStockCount"],
+  outofStockImage1: ["outofStockImage1"],
+  outofStockImage2: ["outofStockImage2", "image2"],
+  image2: ["image2"],
+  outofStockImage3: ["outofStockImage3", "image3"],
+  image3: ["image3"],
+  outofStockImage4: ["outofStockImage4", "image4"],
+  image4: ["image4"],
+  outofStockImage5: ["outofStockImage5", "image5"],
+  image5: ["image5"],
+  outofStockImage6: ["outofStockImage6", "image6"],
+  image6: ["image6"],
+  outofStockImage7: ["outofStockImage7", "image7"],
+  image7: ["image7"],
+  outofStockImage8: ["outofStockImage8", "image8"],
+  image8: ["image8"],
+  outofStockImage9: ["outofStockImage9", "image9"],
+  image9: ["image9"],
+  outofStockImage10: ["outofStockImage10", "image10"],
+  image10: ["image10"],
+  totalBackOrderTitle: ["totalBackOrderTitle"],
+  totalBackOrderCount: ["totalBackOrderCount"],
+  backOrdersStockImage1: ["backOrdersStockImage1", "image11"],
+  image11: ["image11"],
+  backOrdersStockImage2: ["backOrdersStockImage2", "image12"],
+  image12: ["image12"],
+  backOrdersStockImage3: ["backOrdersStockImage3", "image13"],
+  image13: ["image13"],
+  backOrdersStockImage4: ["backOrdersStockImage4", "image14"],
+  image14: ["image14"],
+  backOrdersStockImage5: ["backOrdersStockImage5", "image15"],
+  image15: ["image15"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -293,13 +1766,62 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   dashboardPage: "div";
   mainContainer: "div";
-  sidePanelComponent: typeof SidePanelComponent;
-  freeBox: "div";
+  sidePanel: typeof SidePanel;
+  antdDropdown: typeof Dropdown;
+  antdInputSearch: typeof Search;
   topBar: typeof TopBar;
   dashboardIcon: "svg";
   importButton: typeof Button;
   exportButton: typeof Button;
   addOrderButton: typeof Button;
+  totalRevenu: "div";
+  statsCardDate: typeof StatsCardDate;
+  totalRevenu2: "div";
+  totalRevenu3: "div";
+  statsCardMultiple: typeof StatsCardMultiple;
+  statWidget3: typeof StatWidget3;
+  totalRevenu5: "div";
+  statInventory: typeof StatInventory;
+  statCardWidget4: typeof StatCardWidget4;
+  statInventory2: typeof StatInventory2;
+  totalLowStockItems: "div";
+  totalLowStockCount: "div";
+  lowProductImage1: typeof ProductImage;
+  lowProductImage2: typeof ProductImage;
+  lowProductImage3: typeof ProductImage;
+  totalLowStockTitle: "div";
+  totalOutStockCount: "div";
+  outofStockImage1: typeof ProductImage;
+  outofStockImage2: typeof ProductImage;
+  image2: typeof p.PlasmicImg;
+  outofStockImage3: typeof ProductImage;
+  image3: typeof p.PlasmicImg;
+  outofStockImage4: typeof ProductImage;
+  image4: typeof p.PlasmicImg;
+  outofStockImage5: typeof ProductImage;
+  image5: typeof p.PlasmicImg;
+  outofStockImage6: typeof ProductImage;
+  image6: typeof p.PlasmicImg;
+  outofStockImage7: typeof ProductImage;
+  image7: typeof p.PlasmicImg;
+  outofStockImage8: typeof ProductImage;
+  image8: typeof p.PlasmicImg;
+  outofStockImage9: typeof ProductImage;
+  image9: typeof p.PlasmicImg;
+  outofStockImage10: typeof ProductImage;
+  image10: typeof p.PlasmicImg;
+  totalBackOrderTitle: "div";
+  totalBackOrderCount: "div";
+  backOrdersStockImage1: typeof ProductImage;
+  image11: typeof p.PlasmicImg;
+  backOrdersStockImage2: typeof ProductImage;
+  image12: typeof p.PlasmicImg;
+  backOrdersStockImage3: typeof ProductImage;
+  image13: typeof p.PlasmicImg;
+  backOrdersStockImage4: typeof ProductImage;
+  image14: typeof p.PlasmicImg;
+  backOrdersStockImage5: typeof ProductImage;
+  image15: typeof p.PlasmicImg;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -360,13 +1882,62 @@ export const PlasmicDashboard = Object.assign(
   {
     // Helper components rendering sub-elements
     mainContainer: makeNodeComponent("mainContainer"),
-    sidePanelComponent: makeNodeComponent("sidePanelComponent"),
-    freeBox: makeNodeComponent("freeBox"),
+    sidePanel: makeNodeComponent("sidePanel"),
+    antdDropdown: makeNodeComponent("antdDropdown"),
+    antdInputSearch: makeNodeComponent("antdInputSearch"),
     topBar: makeNodeComponent("topBar"),
     dashboardIcon: makeNodeComponent("dashboardIcon"),
     importButton: makeNodeComponent("importButton"),
     exportButton: makeNodeComponent("exportButton"),
     addOrderButton: makeNodeComponent("addOrderButton"),
+    totalRevenu: makeNodeComponent("totalRevenu"),
+    statsCardDate: makeNodeComponent("statsCardDate"),
+    totalRevenu2: makeNodeComponent("totalRevenu2"),
+    totalRevenu3: makeNodeComponent("totalRevenu3"),
+    statsCardMultiple: makeNodeComponent("statsCardMultiple"),
+    statWidget3: makeNodeComponent("statWidget3"),
+    totalRevenu5: makeNodeComponent("totalRevenu5"),
+    statInventory: makeNodeComponent("statInventory"),
+    statCardWidget4: makeNodeComponent("statCardWidget4"),
+    statInventory2: makeNodeComponent("statInventory2"),
+    totalLowStockItems: makeNodeComponent("totalLowStockItems"),
+    totalLowStockCount: makeNodeComponent("totalLowStockCount"),
+    lowProductImage1: makeNodeComponent("lowProductImage1"),
+    lowProductImage2: makeNodeComponent("lowProductImage2"),
+    lowProductImage3: makeNodeComponent("lowProductImage3"),
+    totalLowStockTitle: makeNodeComponent("totalLowStockTitle"),
+    totalOutStockCount: makeNodeComponent("totalOutStockCount"),
+    outofStockImage1: makeNodeComponent("outofStockImage1"),
+    outofStockImage2: makeNodeComponent("outofStockImage2"),
+    image2: makeNodeComponent("image2"),
+    outofStockImage3: makeNodeComponent("outofStockImage3"),
+    image3: makeNodeComponent("image3"),
+    outofStockImage4: makeNodeComponent("outofStockImage4"),
+    image4: makeNodeComponent("image4"),
+    outofStockImage5: makeNodeComponent("outofStockImage5"),
+    image5: makeNodeComponent("image5"),
+    outofStockImage6: makeNodeComponent("outofStockImage6"),
+    image6: makeNodeComponent("image6"),
+    outofStockImage7: makeNodeComponent("outofStockImage7"),
+    image7: makeNodeComponent("image7"),
+    outofStockImage8: makeNodeComponent("outofStockImage8"),
+    image8: makeNodeComponent("image8"),
+    outofStockImage9: makeNodeComponent("outofStockImage9"),
+    image9: makeNodeComponent("image9"),
+    outofStockImage10: makeNodeComponent("outofStockImage10"),
+    image10: makeNodeComponent("image10"),
+    totalBackOrderTitle: makeNodeComponent("totalBackOrderTitle"),
+    totalBackOrderCount: makeNodeComponent("totalBackOrderCount"),
+    backOrdersStockImage1: makeNodeComponent("backOrdersStockImage1"),
+    image11: makeNodeComponent("image11"),
+    backOrdersStockImage2: makeNodeComponent("backOrdersStockImage2"),
+    image12: makeNodeComponent("image12"),
+    backOrdersStockImage3: makeNodeComponent("backOrdersStockImage3"),
+    image13: makeNodeComponent("image13"),
+    backOrdersStockImage4: makeNodeComponent("backOrdersStockImage4"),
+    image14: makeNodeComponent("image14"),
+    backOrdersStockImage5: makeNodeComponent("backOrdersStockImage5"),
+    image15: makeNodeComponent("image15"),
 
     // Metadata about props expected for PlasmicDashboard
     internalVariantProps: PlasmicDashboard__VariantProps,

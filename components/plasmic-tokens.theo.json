@@ -31,6 +31,16 @@
       }
     },
     {
+      "name": "Orange",
+      "type": "color",
+      "value": "#FF7700",
+      "category": "color",
+      "meta": {
+        "projectId": "n7PMUCBoe1fA7rXcBRi5FH",
+        "id": "CqoRh52LW"
+      }
+    },
+    {
       "name": "Primary-BG-Light",
       "type": "color",
       "value": "#E2F2F3",
@@ -101,6 +111,16 @@
       }
     },
     {
+      "name": "grat-text-medium",
+      "type": "color",
+      "value": "#879092",
+      "category": "color",
+      "meta": {
+        "projectId": "n7PMUCBoe1fA7rXcBRi5FH",
+        "id": "E2FXZqqLC"
+      }
+    },
+    {
       "name": "grey-text",
       "type": "color",
       "value": "#4E6169",
@@ -158,6 +178,16 @@
       "meta": {
         "projectId": "n7PMUCBoe1fA7rXcBRi5FH",
         "id": "1SQz8aj_J"
+      }
+    },
+    {
+      "name": "warning-color",
+      "type": "color",
+      "value": "#F9CE1F",
+      "category": "color",
+      "meta": {
+        "projectId": "n7PMUCBoe1fA7rXcBRi5FH",
+        "id": "qDsnTM3Jt"
       }
     }
   ],

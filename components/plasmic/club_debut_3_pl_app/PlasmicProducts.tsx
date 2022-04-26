@@ -34,6 +34,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import SidePanel from "../../SidePanel"; // plasmic-import: 6cCQxsGyn8Z/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -51,7 +52,10 @@ type ArgPropType = keyof PlasmicProducts__ArgsType;
 export const PlasmicProducts__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicProducts__OverridesType = {
-  productsPage?: p.Flex<"div">;
+  productsPage2?: p.Flex<"div">;
+  freeBox?: p.Flex<"div">;
+  sidePanel?: p.Flex<typeof SidePanel>;
+  content?: p.Flex<"div">;
 };
 
 export interface DefaultProductsProps {}
@@ -77,33 +81,61 @@ function PlasmicProducts__RenderFunc(props: {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-        <div
-          data-plasmic-name={"productsPage"}
-          data-plasmic-override={overrides.productsPage}
-          data-plasmic-root={true}
-          data-plasmic-for-node={forNode}
-          className={classNames(
-            projectcss.all,
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
-            projectcss.plasmic_tokens,
-            sty.productsPage
-          )}
-        />
+        {true ? (
+          <div
+            data-plasmic-name={"productsPage2"}
+            data-plasmic-override={overrides.productsPage2}
+            data-plasmic-root={true}
+            data-plasmic-for-node={forNode}
+            className={classNames(
+              projectcss.all,
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              sty.productsPage2
+            )}
+          >
+            {true ? (
+              <div
+                data-plasmic-name={"freeBox"}
+                data-plasmic-override={overrides.freeBox}
+                className={classNames(projectcss.all, sty.freeBox)}
+              >
+                <SidePanel
+                  data-plasmic-name={"sidePanel"}
+                  data-plasmic-override={overrides.sidePanel}
+                  className={classNames("__wab_instance", sty.sidePanel)}
+                />
+
+                <div
+                  data-plasmic-name={"content"}
+                  data-plasmic-override={overrides.content}
+                  className={classNames(projectcss.all, sty.content)}
+                />
+              </div>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  productsPage: ["productsPage"]
+  productsPage2: ["productsPage2", "freeBox", "sidePanel", "content"],
+  freeBox: ["freeBox", "sidePanel", "content"],
+  sidePanel: ["sidePanel"],
+  content: ["content"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
-  productsPage: "div";
+  productsPage2: "div";
+  freeBox: "div";
+  sidePanel: typeof SidePanel;
+  content: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -150,7 +182,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "productsPage") {
+  if (nodeName === "productsPage2") {
     func.displayName = "PlasmicProducts";
   } else {
     func.displayName = `PlasmicProducts.${nodeName}`;
@@ -160,9 +192,12 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicProducts = Object.assign(
   // Top-level PlasmicProducts renders the root element
-  makeNodeComponent("productsPage"),
+  makeNodeComponent("productsPage2"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
+    sidePanel: makeNodeComponent("sidePanel"),
+    content: makeNodeComponent("content"),
 
     // Metadata about props expected for PlasmicProducts
     internalVariantProps: PlasmicProducts__VariantProps,

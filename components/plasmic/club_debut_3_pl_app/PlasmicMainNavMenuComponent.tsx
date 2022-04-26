@@ -146,6 +146,7 @@ function PlasmicMainNavMenuComponent__RenderFunc(props: {
               "isCollapsed"
             )
           })}
+          selected={true}
           slot={
             (
               hasVariant(variants, "isCollapsed", "isCollapsed") ? true : true
@@ -266,7 +267,6 @@ function PlasmicMainNavMenuComponent__RenderFunc(props: {
               "isCollapsed"
             )
           })}
-          selected={true}
           slot={
             (
               hasVariant(variants, "isCollapsed", "isCollapsed") ? true : true

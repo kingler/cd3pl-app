@@ -224,50 +224,73 @@ function PlasmicSidePanel__RenderFunc(props: {
               ) : null}
             </div>
           ) : null}
-
-          <Select
-            data-plasmic-name={"switchContextComponent"}
-            data-plasmic-override={overrides.switchContextComponent}
-            className={classNames(
-              "__wab_instance",
-              sty.switchContextComponent,
-              {
-                [sty.switchContextComponentisCollapsed]: hasVariant(
-                  variants,
-                  "isCollapsed",
-                  "isCollapsed"
-                )
+          {true ? (
+            <Select
+              data-plasmic-name={"switchContextComponent"}
+              data-plasmic-override={overrides.switchContextComponent}
+              className={classNames(
+                "__wab_instance",
+                sty.switchContextComponent,
+                {
+                  [sty.switchContextComponentisCollapsed]: hasVariant(
+                    variants,
+                    "isCollapsed",
+                    "isCollapsed"
+                  )
+                }
+              )}
+              dropdownIcon={
+                (
+                  hasVariant(variants, "isCollapsed", "isCollapsed")
+                    ? true
+                    : true
+                ) ? (
+                  <MaskIcon
+                    data-plasmic-name={"dropdownIcon"}
+                    data-plasmic-override={overrides.dropdownIcon}
+                    className={classNames(projectcss.all, sty.dropdownIcon, {
+                      [sty.dropdownIconisCollapsed]: hasVariant(
+                        variants,
+                        "isCollapsed",
+                        "isCollapsed"
+                      )
+                    })}
+                    role={"img"}
+                  />
+                ) : null
               }
-            )}
-            dropdownIcon={
-              (
-                hasVariant(variants, "isCollapsed", "isCollapsed") ? true : true
-              ) ? (
-                <MaskIcon
-                  data-plasmic-name={"dropdownIcon"}
-                  data-plasmic-override={overrides.dropdownIcon}
-                  className={classNames(projectcss.all, sty.dropdownIcon, {
-                    [sty.dropdownIconisCollapsed]: hasVariant(
-                      variants,
-                      "isCollapsed",
-                      "isCollapsed"
-                    )
-                  })}
-                  role={"img"}
-                />
-              ) : null
-            }
-            placeholder={
-              (
-                hasVariant(variants, "isCollapsed", "isCollapsed") ? true : true
-              ) ? (
+              placeholder={
+                (
+                  hasVariant(variants, "isCollapsed", "isCollapsed")
+                    ? true
+                    : true
+                ) ? (
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__fjiIt,
+                      {
+                        [sty.textisCollapsed__fjiItuNv3L]: hasVariant(
+                          variants,
+                          "isCollapsed",
+                          "isCollapsed"
+                        )
+                      }
+                    )}
+                  >
+                    {"Basics Fashion Inc..."}
+                  </div>
+                ) : null
+              }
+              selectedContent={
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__fjiIt,
+                    sty.text__zoeLe,
                     {
-                      [sty.textisCollapsed__fjiItuNv3L]: hasVariant(
+                      [sty.textisCollapsed__zoeLeuNv3L]: hasVariant(
                         variants,
                         "isCollapsed",
                         "isCollapsed"
@@ -275,29 +298,11 @@ function PlasmicSidePanel__RenderFunc(props: {
                     }
                   )}
                 >
-                  {"Basics Fashion Inc..."}
+                  {"Selected"}
                 </div>
-              ) : null
-            }
-            selectedContent={
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__zoeLe,
-                  {
-                    [sty.textisCollapsed__zoeLeuNv3L]: hasVariant(
-                      variants,
-                      "isCollapsed",
-                      "isCollapsed"
-                    )
-                  }
-                )}
-              >
-                {"Selected"}
-              </div>
-            }
-          />
+              }
+            />
+          ) : null}
         </p.Stack>
       ) : null}
       {true ? (

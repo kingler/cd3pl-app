@@ -1,0 +1,134 @@
+.statWidget {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 30px 50px 0px #0b162117;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 429px;
+  max-width: 455px;
+  border-radius: 10px;
+  padding: 10px 20px 20px;
+}
+.statWidgetCardTop:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+}
+.text {
+  height: auto;
+}
+.box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 17px;
+  min-width: 0;
+}
+.slotTargetTotalOrdersProcessing {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--token-1SQz8aj_J);
+  line-height: 40px;
+  letter-spacing: 0px;
+}
+.freeBox {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  margin-left: calc(0px - 20px);
+  width: calc(100% + 20px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 20px;
+}
+.svg__n7KFz {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-IBRD-yvJW);
+  width: 36px;
+  height: 36px;
+}
+.text___9Tk6D {
+  text-align: center;
+  font-size: 12px;
+}
+.text__asMbg {
+  font-size: 18px;
+}
+.svg__m8Thm {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-IBRD-yvJW);
+  width: 40px;
+  height: 45px;
+}
+.text__vuEjE {
+  text-align: center;
+  font-size: 12px;
+}
+.text__z4CGj {
+  width: auto;
+  font-size: 18px;
+}
+.svg___6FE6R {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-IBRD-yvJW);
+  width: 40px;
+  height: 40px;
+}
+.text__pyLbe {
+  text-align: center;
+  font-size: 12px;
+}
+.text__trzHj {
+  font-size: 18px;
+}
+.svg___5Wq6Q {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-IBRD-yvJW);
+  width: 48px;
+  height: 40px;
+}
+.text___1Lbvk {
+  text-align: center;
+  height: 100%;
+  font-size: 12px;
+  min-height: 0;
+}
+.text__lf7Y1 {
+  font-size: 18px;
+}

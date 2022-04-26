@@ -1,0 +1,284 @@
+.container {
+  flex-direction: row;
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background: var(--token-O5NCBlXkQ);
+  position: relative;
+  box-shadow: 0px 3px 5px 0px #00000026;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+.container > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.container > :global(.__wab_flex-container) > *,
+.container > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.container > :global(.__wab_flex-container) > picture > img,
+.container
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+.avatar {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  border-radius: 50px;
+  padding: 2px 0px 0px;
+}
+.img__yaxlo {
+  object-fit: cover;
+  max-width: 24px;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 24px;
+  height: 24px;
+  max-height: 24px;
+  flex-shrink: 0;
+  display: inline-block !important;
+  border-radius: 50px;
+}
+.img__yaxlo > picture > img {
+  object-fit: cover;
+}
+.img__yaxlo > .__wab_img-spacer > img {
+  object-fit: cover;
+}
+.imageUrl:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+}
+.freeBox {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+  margin-top: calc(0px - 1px);
+  height: calc(100% + 1px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 1px;
+}
+.freeBox__kAvwv {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.text__u8Zca {
+  position: relative;
+  width: auto;
+  height: auto;
+  color: var(--token-qjU-qfmo9);
+}
+.supabaseField__pT1Y3:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.freeBox__nYlNq {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__nYlNq > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 5px);
+  width: calc(100% + 5px);
+}
+.freeBox__nYlNq > :global(.__wab_flex-container) > *,
+.freeBox__nYlNq > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__nYlNq > :global(.__wab_flex-container) > picture > img,
+.freeBox__nYlNq
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 5px;
+}
+.text__j3MBa {
+  position: relative;
+  width: auto;
+  height: 100%;
+  font-size: 12px;
+  color: var(--token-MNeOwACQv);
+  min-height: 0;
+}
+.text__hsJiy {
+  position: relative;
+  width: auto;
+  height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  align-self: center;
+  color: var(--token-MNeOwACQv);
+}
+.supabaseField__sMoaI:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.freeBox__t1TOn {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+.freeBox__t1TOn > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 5px);
+  width: calc(100% + 5px);
+}
+.freeBox__t1TOn > :global(.__wab_flex-container) > *,
+.freeBox__t1TOn > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__t1TOn > :global(.__wab_flex-container) > picture > img,
+.freeBox__t1TOn
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 5px;
+}
+.freeBox___8VKc1 {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background: var(--token-utV2n2k1f);
+  border-radius: 50px;
+  padding: 1px 5px;
+}
+.freeBox___8VKc1 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 3px);
+  width: calc(100% + 3px);
+}
+.freeBox___8VKc1 > :global(.__wab_flex-container) > *,
+.freeBox___8VKc1 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___8VKc1 > :global(.__wab_flex-container) > picture > img,
+.freeBox___8VKc1
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 3px;
+}
+.svg__yfPUt {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 1em;
+  flex-shrink: 0;
+  height: 1em;
+}
+.text__to2Ko {
+  width: auto;
+  height: 100%;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  min-height: 0;
+}
+.freeBox___3ZfH {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  align-self: center;
+  background: #c6e2ff;
+  border-radius: 50px;
+  padding: 2px 8px 2px 5px;
+}
+.freeBox___3ZfH > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 3px);
+  width: calc(100% + 3px);
+}
+.freeBox___3ZfH > :global(.__wab_flex-container) > *,
+.freeBox___3ZfH > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___3ZfH > :global(.__wab_flex-container) > picture > img,
+.freeBox___3ZfH
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 3px;
+}
+.svg__mfgbw {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.text___2AV4O {
+  width: auto;
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+.supabaseField__oiXxR:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
