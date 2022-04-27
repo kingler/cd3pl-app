@@ -1701,98 +1701,103 @@
       "globalContextsFilePath": "plasmic/club_debut_3_pl_app/PlasmicGlobalContextsProvider.tsx",
       "codeComponents": [
         {
-          "id": "M-kXdn19ZI",
+          "id": "dLH3T0Cdyj",
           "name": "SupabaseField",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "tVTTCZTEeY",
+          "id": "UPL8S5xm7b",
           "name": "SupabaseTextField",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "pB5FRxgX2H",
+          "id": "0FVV2jvkSr",
           "name": "SupabaseImgField",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "lDPLWZLuuM",
-          "name": "SupabaseGrid",
+          "id": "HpZANizidP",
+          "name": "SupabaseGridProducts",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "sHnP2iJyL3",
+          "id": "DC_iGWE7TUb",
           "name": "SupabaseGridCollection",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "MU-X5SsgYlG",
+          "id": "XqkurCQdFRj",
           "name": "FormTextInput",
           "componentImportPath": "./components/CodeComponents/Form"
         },
         {
-          "id": "xa8--lT5h6W",
+          "id": "kUiT_NdGhES",
           "name": "FormContextComponent",
           "componentImportPath": "./components/CodeComponents/Form"
         },
         {
-          "id": "TD5MrslIvGp",
+          "id": "-DyLyr31yr7",
           "name": "SupabaseQuery",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "7l-Q1N8qPOw",
+          "id": "QfQpodP2V5s",
           "name": "SupabaseUserSession",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "KsCwZ_vxr8V",
+          "id": "IQqdKQge7NJ",
           "name": "SupabaseUserLogOut",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "lLtlIrTi23_",
+          "id": "xyA2sq4aZvo",
           "name": "SupabaseUserLogIn",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "7SVcimtmixa",
+          "id": "hsAo19iQivg",
           "name": "SupabaseUserSignUp",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "2AZf7e5V33M",
+          "id": "95QHZPLG7vm",
           "name": "SupabaseMutation",
           "componentImportPath": "./components/CodeComponents/DatabaseComponents"
         },
         {
-          "id": "3kdSsgqWjvV",
+          "id": "vPJPHEZKjIf",
           "name": "SupabaseTableCollection",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         },
         {
-          "id": "lZWRj9rjD4S",
+          "id": "xErc0d6wZbX",
           "name": "SupabaseEditButton",
           "componentImportPath": "./components/CodeComponents/UtilsComponents"
         },
         {
-          "id": "3sEFI7Rg9mq",
+          "id": "32QX19p5tRN",
           "name": "SupabaseDeleteButton",
           "componentImportPath": "./components/CodeComponents/UtilsComponents"
         },
         {
-          "id": "8otX_S09-5m",
+          "id": "9sdKO3bMKTK",
           "name": "SupabaseModal",
           "componentImportPath": "./components/CodeComponents/UtilsComponents"
         },
         {
-          "id": "7-Q63ieecvd",
+          "id": "pyZKzOEdELn",
           "name": "RedirectIf",
           "componentImportPath": "./components/CodeComponents/LogicComponents"
         },
         {
-          "id": "slxe_jdB9I",
-          "name": "SupabaseGridProducts",
+          "id": "OJrt1N2HF8",
+          "name": "SupabaseGridOrders",
+          "componentImportPath": "./components/CodeComponents/DisplayCollections"
+        },
+        {
+          "id": "mEnBCgwJoB",
+          "name": "SupabaseGridCustomers",
           "componentImportPath": "./components/CodeComponents/DisplayCollections"
         }
       ]

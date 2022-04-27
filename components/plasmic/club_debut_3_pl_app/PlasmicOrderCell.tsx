@@ -34,7 +34,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { SupabaseField } from "../../CodeComponents/DisplayCollections"; // plasmic-import: M-kXdn19ZI/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -50,27 +49,22 @@ export type PlasmicOrderCell__VariantsArgs = {};
 type VariantPropType = keyof PlasmicOrderCell__VariantsArgs;
 export const PlasmicOrderCell__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicOrderCell__ArgsType = {
-  slot?: React.ReactNode;
-  slot2?: React.ReactNode;
-};
-
+export type PlasmicOrderCell__ArgsType = {};
 type ArgPropType = keyof PlasmicOrderCell__ArgsType;
-export const PlasmicOrderCell__ArgProps = new Array<ArgPropType>(
-  "slot",
-  "slot2"
-);
+export const PlasmicOrderCell__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicOrderCell__OverridesType = {
   container?: p.Flex<"div">;
   avatar?: p.Flex<"div">;
-  imageUrl?: p.Flex<typeof SupabaseField>;
-  freeBox?: p.Flex<"div">;
+  img?: p.Flex<typeof p.PlasmicImg>;
+  customerName2?: p.Flex<"div">;
+  svg?: p.Flex<"svg">;
+  text?: p.Flex<"div">;
+  dottedCircleIcon?: p.Flex<"svg">;
+  totalPayment3?: p.Flex<"div">;
 };
 
 export interface DefaultOrderCellProps {
-  slot?: React.ReactNode;
-  slot2?: React.ReactNode;
   className?: string;
 }
 
@@ -102,173 +96,116 @@ function PlasmicOrderCell__RenderFunc(props: {
       )}
     >
       {true ? (
-        <div
-          data-plasmic-name={"avatar"}
-          data-plasmic-override={overrides.avatar}
-          className={classNames(projectcss.all, sty.avatar)}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__yaxlo)}
-                displayHeight={"24px" as const}
-                displayMaxHeight={"24px" as const}
-                displayMaxWidth={"24px" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"24px" as const}
-                loading={"lazy" as const}
-                src={{
-                  src: "/plasmic/club_debut_3_pl_app/images/ramiroPowelljpeg.jpeg",
-                  fullWidth: 3569,
-                  fullHeight: 5354,
-                  aspectRatio: undefined
-                }}
-              />
-            ),
-
-            value: args.slot
-          })}
-
-          {true ? (
-            <SupabaseField
-              data-plasmic-name={"imageUrl"}
-              data-plasmic-override={overrides.imageUrl}
-              className={classNames("__wab_instance", sty.imageUrl)}
-              selector={"{{row.imageUrl}}" as const}
-              type={"text" as const}
-            />
-          ) : null}
-        </div>
-      ) : null}
-      {true ? (
         <p.Stack
           as={"div"}
-          data-plasmic-name={"freeBox"}
-          data-plasmic-override={overrides.freeBox}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox)}
+          className={classNames(projectcss.all, sty.freeBox__toJwj)}
         >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <React.Fragment>
-                <div className={classNames(projectcss.all, sty.freeBox__kAvwv)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__u8Zca
-                    )}
-                  >
-                    {"Belinda Hobbs"}
-                  </div>
-
-                  <SupabaseField
-                    className={classNames(
-                      "__wab_instance",
-                      sty.supabaseField__pT1Y3
-                    )}
-                    selector={"{{row.customer_name}}" as const}
-                    type={"text" as const}
+          {true ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__v5Xc)}
+            >
+              {true ? (
+                <div
+                  data-plasmic-name={"avatar"}
+                  data-plasmic-override={overrides.avatar}
+                  className={classNames(projectcss.all, sty.avatar)}
+                >
+                  <p.PlasmicImg
+                    data-plasmic-name={"img"}
+                    data-plasmic-override={overrides.img}
+                    alt={""}
+                    className={classNames(sty.img)}
+                    displayHeight={"24px" as const}
+                    displayMaxHeight={"24px" as const}
+                    displayMaxWidth={"24px" as const}
+                    displayMinHeight={"0" as const}
+                    displayMinWidth={"0" as const}
+                    displayWidth={"24px" as const}
+                    loading={"lazy" as const}
+                    src={{
+                      src: "/plasmic/club_debut_3_pl_app/images/ramiroPowelljpeg.jpeg",
+                      fullWidth: 3569,
+                      fullHeight: 5354,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
+              ) : null}
 
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__nYlNq)}
+              <div className={classNames(projectcss.all, sty.freeBox__kAvwv)}>
+                <div
+                  data-plasmic-name={"customerName2"}
+                  data-plasmic-override={overrides.customerName2}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.customerName2
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__j3MBa
-                    )}
-                  >
-                    {"Payment"}
-                  </div>
+                  {"Belinda Hobbs"}
+                </div>
+              </div>
+            </p.Stack>
+          ) : null}
 
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__hsJiy
-                    )}
-                  >
-                    {"$120"}
-                  </div>
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__t1TOn)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___8VKc1)}
+            >
+              <AppIcons2Icon
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
+                role={"img"}
+              />
 
-                  <SupabaseField
-                    className={classNames(
-                      "__wab_instance",
-                      sty.supabaseField__sMoaI
-                    )}
-                    selector={"{{row.total_payment}}" as const}
-                    type={"text" as const}
-                  />
-                </p.Stack>
+              <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text
+                )}
+              >
+                {"1 items"}
+              </div>
+            </p.Stack>
 
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__t1TOn)}
-                >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox___8VKc1)}
-                  >
-                    <AppIcons2Icon
-                      className={classNames(projectcss.all, sty.svg__yfPUt)}
-                      role={"img"}
-                    />
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___3ZfH)}
+            >
+              <Property1ProcessingCirclesvgIcon
+                data-plasmic-name={"dottedCircleIcon"}
+                data-plasmic-override={overrides.dottedCircleIcon}
+                className={classNames(projectcss.all, sty.dottedCircleIcon)}
+                role={"img"}
+              />
 
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__to2Ko
-                      )}
-                    >
-                      {"300 items"}
-                    </div>
-                  </p.Stack>
-
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox___3ZfH)}
-                  >
-                    <Property1ProcessingCirclesvgIcon
-                      className={classNames(projectcss.all, sty.svg__mfgbw)}
-                      role={"img"}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___2AV4O
-                      )}
-                    >
-                      {"Processing"}
-                    </div>
-                  </p.Stack>
-
-                  <SupabaseField
-                    className={classNames(
-                      "__wab_instance",
-                      sty.supabaseField__oiXxR
-                    )}
-                    selector={"{{row.total_payment}}" as const}
-                    type={"text" as const}
-                  />
-                </p.Stack>
-              </React.Fragment>
-            ),
-            value: args.slot2
-          })}
+              <div
+                data-plasmic-name={"totalPayment3"}
+                data-plasmic-override={overrides.totalPayment3}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.totalPayment3
+                )}
+              >
+                {"Processing"}
+              </div>
+            </p.Stack>
+          </p.Stack>
         </p.Stack>
       ) : null}
     </p.Stack>
@@ -276,10 +213,23 @@ function PlasmicOrderCell__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  container: ["container", "avatar", "imageUrl", "freeBox"],
-  avatar: ["avatar", "imageUrl"],
-  imageUrl: ["imageUrl"],
-  freeBox: ["freeBox"]
+  container: [
+    "container",
+    "avatar",
+    "img",
+    "customerName2",
+    "svg",
+    "text",
+    "dottedCircleIcon",
+    "totalPayment3"
+  ],
+  avatar: ["avatar", "img"],
+  img: ["img"],
+  customerName2: ["customerName2"],
+  svg: ["svg"],
+  text: ["text"],
+  dottedCircleIcon: ["dottedCircleIcon"],
+  totalPayment3: ["totalPayment3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -287,8 +237,12 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   container: "div";
   avatar: "div";
-  imageUrl: typeof SupabaseField;
-  freeBox: "div";
+  img: typeof p.PlasmicImg;
+  customerName2: "div";
+  svg: "svg";
+  text: "div";
+  dottedCircleIcon: "svg";
+  totalPayment3: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -349,8 +303,12 @@ export const PlasmicOrderCell = Object.assign(
   {
     // Helper components rendering sub-elements
     avatar: makeNodeComponent("avatar"),
-    imageUrl: makeNodeComponent("imageUrl"),
-    freeBox: makeNodeComponent("freeBox"),
+    img: makeNodeComponent("img"),
+    customerName2: makeNodeComponent("customerName2"),
+    svg: makeNodeComponent("svg"),
+    text: makeNodeComponent("text"),
+    dottedCircleIcon: makeNodeComponent("dottedCircleIcon"),
+    totalPayment3: makeNodeComponent("totalPayment3"),
 
     // Metadata about props expected for PlasmicOrderCell
     internalVariantProps: PlasmicOrderCell__VariantProps,

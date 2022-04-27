@@ -22,12 +22,11 @@
   max-width: 100%;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   padding-left: 7px;
   padding-right: 7px;
   min-width: 0;
-  min-height: 0;
-  margin: -30px 0px 0px;
+  margin: -23px 0px 0px;
 }
 .ordersByDay:global(.__wab_instance) {
   max-width: 100%;
@@ -36,6 +35,7 @@
   z-index: 1;
   position: sticky;
   width: 100%;
+  height: auto;
   min-width: 0;
   display: flex;
 }
@@ -52,12 +52,12 @@
 .barChat3 {
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 161px;
   display: flex;
   position: relative;
   top: auto;
   left: auto;
-  margin-top: 0px;
+  margin-top: -9px;
   z-index: 1;
   min-width: 0;
 }
@@ -93,7 +93,7 @@
   z-index: 1;
   min-width: 0;
   flex-shrink: 0;
-  padding: 8px 0px;
+  padding: 1px 0px 0px;
 }
 .previousButton3 {
   flex-direction: row;
@@ -223,7 +223,7 @@
   height: auto;
   width: auto;
   margin-left: 0px;
-  padding-bottom: 8px;
+  padding-bottom: 0px;
 }
 .barValues3 {
   flex-direction: row;
@@ -235,7 +235,7 @@
   top: auto;
   left: auto;
   align-self: stretch;
-  padding: 10px 25px 9px;
+  padding: 8px 25px 1px;
 }
 .barValues3 > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -374,7 +374,7 @@
 .bars3 {
   flex-direction: row;
   width: auto;
-  height: 76px;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
@@ -382,7 +382,7 @@
   margin-left: 0px;
   overflow: hidden;
   align-self: stretch;
-  flex-shrink: 0;
+  padding-top: 0px;
 }
 .bars3 > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -643,12 +643,12 @@
 .monthBarChat {
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 147px;
   display: flex;
   position: relative;
   top: auto;
   left: auto;
-  margin-top: 0px;
+  margin-top: -9px;
   z-index: 1;
   min-width: 0;
 }
@@ -832,8 +832,8 @@
   top: auto;
   left: auto;
   padding-left: 0px;
-  padding-top: 5px;
-  padding-bottom: 9px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   align-self: stretch;
   min-width: 0;
 }

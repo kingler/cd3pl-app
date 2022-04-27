@@ -196,9 +196,7 @@ function PlasmicDashboard__RenderFunc(props: {
                   data-plasmic-override={overrides.sidePanel}
                   className={classNames("__wab_instance", sty.sidePanel)}
                   isCollapsed={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? true
-                      : undefined
+                    hasVariant(globalVariants, "screen", "mobile") ? true : true
                   }
                 />
               ) : null}

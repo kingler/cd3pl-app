@@ -40,7 +40,9 @@ import Button from "../../Button"; // plasmic-import: iZavS5akl9G/component
 import StatsCardBasic from "../../StatsCardBasic"; // plasmic-import: V8KmQ7KGSy/component
 import StatsCardDate from "../../StatsCardDate"; // plasmic-import: YFRpRP19Qn1/component
 import OrderCell from "../../OrderCell"; // plasmic-import: gg3SzItfYc/component
-import { SupabaseField } from "../../CodeComponents/DisplayCollections"; // plasmic-import: M-kXdn19ZI/codeComponent
+import { SupabaseGridOrders } from "../../CodeComponents/DisplayCollections"; // plasmic-import: OJrt1N2HF8/codeComponent
+import { SupabaseTextField } from "../../CodeComponents/DisplayCollections"; // plasmic-import: UPL8S5xm7b/codeComponent
+import { SupabaseField } from "../../CodeComponents/DisplayCollections"; // plasmic-import: dLH3T0Cdyj/codeComponent
 
 import { useScreenVariants as useScreenVariants_6JfnloVhzca } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 6JfnloVhzca/globalVariant
 
@@ -54,8 +56,6 @@ import IcondownIconIcon from "./icons/PlasmicIcon__IcondownIcon"; // plasmic-imp
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: zGfmmTFBuGj/icon
 import IconimportIconIcon from "./icons/PlasmicIcon__IconimportIcon"; // plasmic-import: kNFnVu4W7A/icon
 import AppIcons5Icon from "./icons/PlasmicIcon__AppIcons5"; // plasmic-import: 7I9cVdZlI5O/icon
-import AppIcons2Icon from "./icons/PlasmicIcon__AppIcons2"; // plasmic-import: O8LjEO2Edap/icon
-import Property1ProcessingCirclesvgIcon from "./icons/PlasmicIcon__Property1ProcessingCirclesvg"; // plasmic-import: v4NLsLx-n/icon
 
 export type PlasmicOrders__VariantMembers = {};
 
@@ -76,13 +76,9 @@ export type PlasmicOrders__OverridesType = {
   exportButton?: p.Flex<typeof Button>;
   importButton?: p.Flex<typeof Button>;
   statsCardDate?: p.Flex<typeof StatsCardDate>;
-  orderCell?: p.Flex<typeof OrderCell>;
-  customerName2?: p.Flex<"div">;
-  customerName?: p.Flex<typeof SupabaseField>;
-  totalPayment2?: p.Flex<"div">;
-  totalPayment?: p.Flex<typeof SupabaseField>;
-  totalPayment3?: p.Flex<"div">;
-  totalPayment4?: p.Flex<typeof SupabaseField>;
+  supabaseGridOrders?: p.Flex<typeof SupabaseGridOrders>;
+  supabaseTextField?: p.Flex<typeof SupabaseTextField>;
+  supabaseField?: p.Flex<typeof SupabaseField>;
 };
 
 export interface DefaultOrdersProps {}
@@ -147,63 +143,77 @@ function PlasmicOrders__RenderFunc(props: {
                 data-plasmic-override={overrides.mainContent}
                 className={classNames(projectcss.all, sty.mainContent)}
               >
-                <TopBar
-                  data-plasmic-name={"topBar"}
-                  data-plasmic-override={overrides.topBar}
-                  className={classNames("__wab_instance", sty.topBar)}
-                  exportButton={
-                    <Button
-                      data-plasmic-name={"exportButton"}
-                      data-plasmic-override={overrides.exportButton}
-                      className={classNames("__wab_instance", sty.exportButton)}
-                      color={"link" as const}
-                      showStartIcon={true}
-                      startIcon={
-                        <IcondownIconIcon
-                          className={classNames(projectcss.all, sty.svg__ua5Pe)}
-                          role={"img"}
-                        />
-                      }
-                    >
-                      <div
+                {true ? (
+                  <TopBar
+                    data-plasmic-name={"topBar"}
+                    data-plasmic-override={overrides.topBar}
+                    className={classNames("__wab_instance", sty.topBar)}
+                    exportButton={
+                      <Button
+                        data-plasmic-name={"exportButton"}
+                        data-plasmic-override={overrides.exportButton}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__tNdjs
+                          "__wab_instance",
+                          sty.exportButton
                         )}
+                        color={"link" as const}
+                        showStartIcon={true}
+                        startIcon={
+                          <IcondownIconIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__ua5Pe
+                            )}
+                            role={"img"}
+                          />
+                        }
                       >
-                        {"Export"}
-                      </div>
-                    </Button>
-                  }
-                  importButton={
-                    <Button
-                      data-plasmic-name={"importButton"}
-                      data-plasmic-override={overrides.importButton}
-                      className={classNames("__wab_instance", sty.importButton)}
-                      color={"link" as const}
-                      showStartIcon={true}
-                      startIcon={
-                        <IconimportIconIcon
-                          className={classNames(projectcss.all, sty.svg__sq4ED)}
-                          role={"img"}
-                        />
-                      }
-                    >
-                      <div
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__tNdjs
+                          )}
+                        >
+                          {"Export"}
+                        </div>
+                      </Button>
+                    }
+                    importButton={
+                      <Button
+                        data-plasmic-name={"importButton"}
+                        data-plasmic-override={overrides.importButton}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___4BsgS
+                          "__wab_instance",
+                          sty.importButton
                         )}
+                        color={"link" as const}
+                        showStartIcon={true}
+                        startIcon={
+                          <IconimportIconIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__sq4ED
+                            )}
+                            role={"img"}
+                          />
+                        }
                       >
-                        {"Import"}
-                      </div>
-                    </Button>
-                  }
-                >
-                  {"Orders"}
-                </TopBar>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___4BsgS
+                          )}
+                        >
+                          {"Import"}
+                        </div>
+                      </Button>
+                    }
+                  >
+                    {"Orders"}
+                  </TopBar>
+                ) : null}
 
                 <p.Stack
                   as={"div"}
@@ -244,168 +254,110 @@ function PlasmicOrders__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__sbhY)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___1NWP)}
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1NWP
+                        )}
+                      >
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__cvRDo
+                          )}
+                        />
+
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__epQ2I
+                          )}
+                        />
+
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__kzzeC
+                          )}
+                        />
+
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__fFnOo
+                          )}
+                        />
+
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__y2Voj
+                          )}
+                        />
+
+                        <OrderCell
+                          className={classNames(
+                            "__wab_instance",
+                            sty.orderCell__a98Fz
+                          )}
+                        />
+                      </p.Stack>
+                    ) : null}
+
+                    <SupabaseGridOrders
+                      data-plasmic-name={"supabaseGridOrders"}
+                      data-plasmic-override={overrides.supabaseGridOrders}
+                      className={
+                        ("" as const) +
+                        classNames("__wab_instance", sty.supabaseGridOrders)
+                      }
+                      columnGap={16 as const}
+                      loading={
+                        true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wN8FF
+                            )}
+                          >
+                            {"Loading..."}
+                          </div>
+                        ) : null
+                      }
+                      numColumns={4 as const}
+                      rowGap={16 as const}
+                      tableColumns={[
+                        "customer_name",
+                        "total_payment",
+                        "customer_imageUrl"
+                      ]}
+                      tableName={"Orders" as const}
                     >
-                      <OrderCell
-                        data-plasmic-name={"orderCell"}
-                        data-plasmic-override={overrides.orderCell}
-                        className={classNames("__wab_instance", sty.orderCell)}
-                        slot2={
-                          <React.Fragment>
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__ofs8N
-                              )}
-                            >
-                              <div
-                                data-plasmic-name={"customerName2"}
-                                data-plasmic-override={overrides.customerName2}
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.customerName2
-                                )}
-                              >
-                                {"Belinda Hobbs"}
-                              </div>
-
-                              <SupabaseField
-                                data-plasmic-name={"customerName"}
-                                data-plasmic-override={overrides.customerName}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.customerName
-                                )}
-                                selector={"{{row.customer_name}}" as const}
-                                type={"text" as const}
-                              />
-                            </div>
-
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__gp5KE
-                              )}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__vG4Cx
-                                )}
-                              >
-                                {"Payment:"}
-                              </div>
-
-                              <div
-                                data-plasmic-name={"totalPayment2"}
-                                data-plasmic-override={overrides.totalPayment2}
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.totalPayment2
-                                )}
-                              >
-                                {"$120"}
-                              </div>
-
-                              <SupabaseField
-                                data-plasmic-name={"totalPayment"}
-                                data-plasmic-override={overrides.totalPayment}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.totalPayment
-                                )}
-                                selector={"{{row.total_payment}}" as const}
-                                type={"text" as const}
-                              />
-                            </p.Stack>
-
-                            <p.Stack
-                              as={"div"}
-                              hasGap={true}
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__joMxR
-                              )}
-                            >
-                              <p.Stack
-                                as={"div"}
-                                hasGap={true}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__tPy5G
-                                )}
-                              >
-                                <AppIcons2Icon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__bEptC
-                                  )}
-                                  role={"img"}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__zgezm
-                                  )}
-                                >
-                                  {"300 items"}
-                                </div>
-                              </p.Stack>
-
-                              <p.Stack
-                                as={"div"}
-                                hasGap={true}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox___9PIuG
-                                )}
-                              >
-                                <Property1ProcessingCirclesvgIcon
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg__yK5Bp
-                                  )}
-                                  role={"img"}
-                                />
-
-                                <div
-                                  data-plasmic-name={"totalPayment3"}
-                                  data-plasmic-override={
-                                    overrides.totalPayment3
-                                  }
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.totalPayment3
-                                  )}
-                                >
-                                  {"Processing"}
-                                </div>
-                              </p.Stack>
-
-                              <SupabaseField
-                                data-plasmic-name={"totalPayment4"}
-                                data-plasmic-override={overrides.totalPayment4}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.totalPayment4
-                                )}
-                                selector={"{{row.total_payment}}" as const}
-                                type={"text" as const}
-                              />
-                            </p.Stack>
-                          </React.Fragment>
+                      <SupabaseTextField
+                        data-plasmic-name={"supabaseTextField"}
+                        data-plasmic-override={overrides.supabaseTextField}
+                        className={
+                          ("" as const) +
+                          classNames("__wab_instance", sty.supabaseTextField)
                         }
+                        name={"{{row.customer_id.row.first_name}}" as const}
                       />
-                    </div>
+
+                      <SupabaseField
+                        data-plasmic-name={"supabaseField"}
+                        data-plasmic-override={overrides.supabaseField}
+                        className={
+                          ("" as const) +
+                          classNames("__wab_instance", sty.supabaseField)
+                        }
+                        selector={"{{row.customer_id.first_name}}" as const}
+                        type={"text" as const}
+                      />
+                    </SupabaseGridOrders>
                   </div>
                 ) : null}
               </div>
@@ -427,13 +379,9 @@ const PlasmicDescendants = {
     "exportButton",
     "importButton",
     "statsCardDate",
-    "orderCell",
-    "customerName2",
-    "customerName",
-    "totalPayment2",
-    "totalPayment",
-    "totalPayment3",
-    "totalPayment4"
+    "supabaseGridOrders",
+    "supabaseTextField",
+    "supabaseField"
   ],
   layout: [
     "layout",
@@ -443,13 +391,9 @@ const PlasmicDescendants = {
     "exportButton",
     "importButton",
     "statsCardDate",
-    "orderCell",
-    "customerName2",
-    "customerName",
-    "totalPayment2",
-    "totalPayment",
-    "totalPayment3",
-    "totalPayment4"
+    "supabaseGridOrders",
+    "supabaseTextField",
+    "supabaseField"
   ],
   sidePanel: ["sidePanel"],
   mainContent: [
@@ -458,33 +402,21 @@ const PlasmicDescendants = {
     "exportButton",
     "importButton",
     "statsCardDate",
-    "orderCell",
-    "customerName2",
-    "customerName",
-    "totalPayment2",
-    "totalPayment",
-    "totalPayment3",
-    "totalPayment4"
+    "supabaseGridOrders",
+    "supabaseTextField",
+    "supabaseField"
   ],
   topBar: ["topBar", "exportButton", "importButton"],
   exportButton: ["exportButton"],
   importButton: ["importButton"],
   statsCardDate: ["statsCardDate"],
-  orderCell: [
-    "orderCell",
-    "customerName2",
-    "customerName",
-    "totalPayment2",
-    "totalPayment",
-    "totalPayment3",
-    "totalPayment4"
+  supabaseGridOrders: [
+    "supabaseGridOrders",
+    "supabaseTextField",
+    "supabaseField"
   ],
-  customerName2: ["customerName2"],
-  customerName: ["customerName"],
-  totalPayment2: ["totalPayment2"],
-  totalPayment: ["totalPayment"],
-  totalPayment3: ["totalPayment3"],
-  totalPayment4: ["totalPayment4"]
+  supabaseTextField: ["supabaseTextField"],
+  supabaseField: ["supabaseField"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -498,13 +430,9 @@ type NodeDefaultElementType = {
   exportButton: typeof Button;
   importButton: typeof Button;
   statsCardDate: typeof StatsCardDate;
-  orderCell: typeof OrderCell;
-  customerName2: "div";
-  customerName: typeof SupabaseField;
-  totalPayment2: "div";
-  totalPayment: typeof SupabaseField;
-  totalPayment3: "div";
-  totalPayment4: typeof SupabaseField;
+  supabaseGridOrders: typeof SupabaseGridOrders;
+  supabaseTextField: typeof SupabaseTextField;
+  supabaseField: typeof SupabaseField;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -571,13 +499,9 @@ export const PlasmicOrders = Object.assign(
     exportButton: makeNodeComponent("exportButton"),
     importButton: makeNodeComponent("importButton"),
     statsCardDate: makeNodeComponent("statsCardDate"),
-    orderCell: makeNodeComponent("orderCell"),
-    customerName2: makeNodeComponent("customerName2"),
-    customerName: makeNodeComponent("customerName"),
-    totalPayment2: makeNodeComponent("totalPayment2"),
-    totalPayment: makeNodeComponent("totalPayment"),
-    totalPayment3: makeNodeComponent("totalPayment3"),
-    totalPayment4: makeNodeComponent("totalPayment4"),
+    supabaseGridOrders: makeNodeComponent("supabaseGridOrders"),
+    supabaseTextField: makeNodeComponent("supabaseTextField"),
+    supabaseField: makeNodeComponent("supabaseField"),
 
     // Metadata about props expected for PlasmicOrders
     internalVariantProps: PlasmicOrders__VariantProps,

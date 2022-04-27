@@ -28,7 +28,7 @@
   max-width: 100%;
   position: relative;
   flex-shrink: 0;
-  display: none;
+  display: flex;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .sidePanel:global(.__wab_instance) {

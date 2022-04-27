@@ -130,14 +130,20 @@ export interface paths {
           id: parameters["rowFilter.orders.id"];
           created_at:  parameters["rowFilter.orders.created_at"];
           customer_id?: parameters["rowFilter.orders.customer_id"];
+          customer_name?: parameters["rowFilter.orders.customer_name"];
+          customer_imageUrl?: parameters["rowFilter.orders.customer_imageUrl"];
           total_payment?: parameters["rowFilter.orders.total_payment"];
-          payment_status?: parameters["rowFilter.orders.payment_status"];
+          payment_status_name?: parameters["rowFilter.orders.payment_status_name"];
+          payment_status_id?: parameters["rowFilter.orders.payment_status_id"];
           status_id?:parameters["rowFilter.orders.status_id"];
+          status_name?:parameters["rowFilter.orders.status_name"];
           tracking?:parameters["rowFilter.orders.tracking"];
           point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          pos_name?:parameters["rowFilter.orders.pos_name"];
           purchase_date?:parameters["rowFilter.orders.purchase_date"];
           item_count?: parameters["rowFilter.orders.item_count"];
-          items_id?:parameters["rowFilter.orders.items_id"];
+          item_id?:parameters["rowFilter.orders.item_id"];
+          item_ui_icon?:parameters["rowFilter.orders.item_ui_icon"];
           select?: parameters["select"];
           order?: parameters["order"];
           offset?: parameters["offset"];
@@ -185,14 +191,20 @@ export interface paths {
           id: parameters["rowFilter.orders.id"];
           created_at:  parameters["rowFilter.orders.created_at"];
           customer_id?: parameters["rowFilter.orders.customer_id"];
+          customer_name?: parameters["rowFilter.orders.customer_name"];
+          customer_imageUrl?: parameters["rowFilter.orders.customer_imageUrl"];
           total_payment?: parameters["rowFilter.orders.total_payment"];
-          payment_status?: parameters["rowFilter.orders.payment_status"];
+          payment_status_id?: parameters["rowFilter.orders.payment_status_id"];
+          payment_status_name?: parameters["rowFilter.orders.payment_status_name"];
           status_id?:parameters["rowFilter.orders.status_id"];
+          status_name?:parameters["rowFilter.orders.status_name"];
           tracking?:parameters["rowFilter.orders.tracking"];
           point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          pos_name?:parameters["rowFilter.orders.pos_name"];
           purchase_date?:parameters["rowFilter.orders.purchase_date"];
           item_count?: parameters["rowFilter.orders.item_count"];
-          items_id?:parameters["rowFilter.orders.items_id"];
+          item_id?:parameters["rowFilter.orders.item_id"];
+          item_ui_icon?:parameters["rowFilter.orders.item_ui_icon"];
         };
         header: {
           /** Preference */
@@ -211,13 +223,19 @@ export interface paths {
           created_at:  parameters["rowFilter.orders.created_at"];
           customer_id?: parameters["rowFilter.orders.customer_id"];
           total_payment?: parameters["rowFilter.orders.total_payment"];
-          payment_status?: parameters["rowFilter.orders.payment_status"];
+          customer_name?: parameters["rowFilter.orders.customer_name"];
+          customer_imageUrl?: parameters["rowFilter.orders.customer_imageUrl"];
+          payment_status_id?: parameters["rowFilter.orders.payment_status_id"];
+          payment_status_name?: parameters["rowFilter.orders.payment_status_name"];
           status_id?:parameters["rowFilter.orders.status_id"];
+          status_name?:parameters["rowFilter.orders.status_name"];
           tracking?:parameters["rowFilter.orders.tracking"];
           point_of_sale_id?:parameters["rowFilter.orders.point_of_sale_id"];
+          pos_name?:parameters["rowFilter.orders.pos_name"];
           purchase_date?:parameters["rowFilter.orders.purchase_date"];
           item_count?: parameters["rowFilter.orders.item_count"];
-          items_id?:parameters["rowFilter.orders.items_id"];
+          item_id?:parameters["rowFilter.orders.item_id"];
+          item_ui_icon?:parameters["rowFilter.orders.item_ui_icon"];
         };
         body: {
           /** customers */
@@ -498,14 +516,20 @@ export interface parameters {
   "rowFilter.orders.id": string;
   "rowFilter.orders.created_at": string;
   "rowFilter.orders.customer_id": string;
+  "rowFilter.orders.customer_name": string;
+  "rowFilter.orders.customer_imageUrl": string;
   "rowFilter.orders.total_payment": string;
-  "rowFilter.orders.payment_status": string;
+  "rowFilter.orders.payment_status_id": string;
+  "rowFilter.orders.payment_status_name": string;
   "rowFilter.orders.status_id": string;
+  "rowFilter.orders.status_name": string;
   "rowFilter.orders.tracking": string;
   "rowFilter.orders.point_of_sale_id": string;
+  "rowFilter.orders.pos_name": string;
   "rowFilter.orders.purchase_date": string;
   "rowFilter.orders.item_count": string;
-  "rowFilter.orders.items_id": string;
+  "rowFilter.orders.item_id": string;
+  "rowFilter.orders.item_ui_icon": string;
    /** @description products */
    "body.products": definitions["products"];
    "rowFilter.products.id": string;

@@ -52,6 +52,7 @@ export const PLASMIC = initPlasmicLoader({
  PLASMIC.registerComponent(SupabaseField, {
   name: "SupabaseField",
   props: {
+    className: "string",
     selector: "string",
     type: {
       type: "choice",
@@ -65,6 +66,7 @@ export const PLASMIC = initPlasmicLoader({
 PLASMIC.registerComponent(SupabaseTextField, {
   name: "SupabaseTextField",
   props: {
+    className: "string",
     name: "string",
   },
   importPath: "./components/CodeComponents/DisplayCollections",
@@ -73,19 +75,21 @@ PLASMIC.registerComponent(SupabaseTextField, {
 PLASMIC.registerComponent(SupabaseImgField, {
   name: "SupabaseImgField",
   props: {
+    className: "string",
     url: "string",
   },
   importPath: "./components/CodeComponents/DisplayCollections",
 });
 
 PLASMIC.registerComponent(SupabaseGrid, {
-  name: "SupabaseGrid",
+  name: "SupabaseGridCustomers",
   props: {
+    className: "string",
     tableName:{
       type: "choice",
       defaultValue: "customers",
       options: [
-        "Customers"
+        "Customers",
       ],
     },
     tableColumns: {
@@ -141,6 +145,7 @@ PLASMIC.registerComponent(SupabaseGrid, {
 PLASMIC.registerComponent(SupabaseGrid, {
   name: "SupabaseGridProducts",
   props: {
+    className: "string",
     tableName: {
       type: "choice",
       defaultValue: "Products",
@@ -203,6 +208,76 @@ PLASMIC.registerComponent(SupabaseGrid, {
   },
   importPath: "./components/CodeComponents/DisplayCollections",
 },);
+
+PLASMIC.registerComponent(SupabaseGrid, {
+  name: "SupabaseGridOrders",
+  props: {
+    className: "string",
+    tableName: {
+      type: "choice",
+      defaultValue: "Orders",
+      options: [
+        "Orders"
+      ],
+    },
+    tableColumns: {
+      type: "choice",
+      multiSelect: true,
+      options: 
+       [
+        "id",
+        "created_at",
+        "item_id",
+        "item_count",
+        "item_ui_icon",
+        "customer_id",
+        "customer_name",
+        "customer_imageUrl",
+        "total_payment",
+        "payment_status_id",
+        "payment_status_name",
+        "status_id",
+        "status_name",
+        "tracking",
+        "point_of_sale_id",
+        "pos_name",
+        "purchase_date",
+        "fulfillment_cost",
+      ],
+    },
+    
+    queryFilters: "object",
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Placeholder",
+      },
+    },
+    numColumns: {
+      type: "number",
+      defaultValue: 4,
+    },
+    columnGap: {
+      type: "number",
+      defaultValue: 16,
+    },
+    rowGap: {
+      type: "number",
+      defaultValue: 16,
+    },
+    count: "number",
+    loading: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Loading...",
+      },
+    },
+  },
+  importPath: "./components/CodeComponents/DisplayCollections",
+},);
+
 
 PLASMIC.registerComponent(SupabaseGridCollection, {
   name: "SupabaseGridCollection",
